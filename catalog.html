@@ -57,11 +57,14 @@
             <option value="price">по цене</option>
           </select>
         </fieldset>
-        <div class="price-scale"> <!-- Отбор по цене. Попробовать сделать подвижными -->
-          <div class="bar"></div>
-          <div class="min-toggle"></div>
-          <div class="max-toggle"></div>
-        </div>
+        <fieldset>
+          <legend>Цена: <span class="min-price">100</span> руб. - <span class="max-price">500</span> руб.</legend>
+          <div class="price-scale">
+            <div class="bar"></div>
+            <div class="min-toggle"></div>
+            <div class="max-toggle"></div>
+          </div>
+        </fieldset>
         <fieldset>
           <legend>Жирность:</legend>
           <input type="radio" name="fatness" value="0" id="radio1">
@@ -88,83 +91,107 @@
         </fieldset>
         <button class="btn filter-apply" type="submit">Применить</button>
       </form>
-      <article class="item-list">
-        <div class="item-img-price"> <!-- Мороженое 1 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+      <section class="item-list">
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 1 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 2 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 2 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 3 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 3 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 4 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 4 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>310</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 5 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>325</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 5 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>325</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное с брусничным джемом</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное с брусничным джемом</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 6 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>410</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 6 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>410</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочно-черничное с цельными ягодами черники</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 7 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>375</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 7 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>375</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 8 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>320</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 8 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>320</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное с шоколадной стружкой</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное с шоколадной стружкой</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 9 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>440</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 9 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>440</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочно-ванильное с кусочками шоколада</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 10 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>435</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 10 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>435</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное с ментоловым сиропом</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное с ментоловым сиропом</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 11 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>355</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 11 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>355</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное с кусочками черного шоколада</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное с кусочками черного шоколада</a>
-        <a href="#">Быстрый просмотр</a>
-        <div class="item-img-price"> <!-- Мороженое 12 -->
-          <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-          <p><b>420</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+        <div class="item">
+          <div class="item-img-price"> <!-- Мороженое 12 -->
+            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
+            <p><b>420</b> <img src="http://placehold.it/27x32" width="27" height="32" alt="р."> /кг</p>
+          </div>
+          <a href="#">Сливочное с мятным сиропом</a>
+          <a href="#">Быстрый просмотр</a>
         </div>
-        <a href="#">Сливочное с мятным сиропом</a>
-        <a href="#">Быстрый просмотр</a>
-      </article>
+      </section>
       <div class="page-navigation"> <!-- Постраничная навигация -->
-        <a class="prev" href="#">Назад</a>
-        <a href="#">1</a>
+        <a class="prev disabled">Назад</a>
+        <a>1</a>
         <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
@@ -191,8 +218,10 @@
           </div>
         </div>
         <div class="made-in"> <!-- Копирайт -->
-          <img src="http://placehold.it/108x38" width="108" height="38" alt="Логотип HTML Academy">
-          <p>Сделано в <u>HTML Academy</u> &copy; 2016</p>
+          <a class="htmla-logo" href="https://htmlacademy.ru/">
+             <img src="http://placehold.it/108x38" width="108" height="38" alt="Логотип HTML Academy">
+          </a>
+          <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
         </div>
       </div>
     </footer>
