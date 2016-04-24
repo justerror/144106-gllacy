@@ -1,9 +1,16 @@
 body {
+  min-width: 900px; 
+  margin: 0 auto; 
   font-size: 16px; 
   line-height: 22px; 
   color: #323232; 
   font-weight: normal; 
-  font-family: "Roboto Regular", "Arial", sans-serif; 
+  font-family: "Roboto Regular", "Arial", sans-serif;   
+}
+
+.wrapper {
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 h1 {
@@ -28,22 +35,24 @@ h3 {
   font-weight: bold; 
 }
 
-.main-header {
-  min-width: 1200px; 
-  outline: 2px solid red; 
+.container {
+  min-width: 860px; 
+  max-width: 1146px; 
+  margin: 0 auto 40px auto; 
+  padding: 0 2.3%; 
+  outline: 2px dashed green; 
 }
 
-.container {
-  width: 1146px; 
-  margin: 0 auto; 
-  padding: 0 27px; 
-  outline: 2px dashed green; 
+.container:last-child {
+  margin-top: 20px; 
+  margin-bottom: 25px; 
 }
 
 .logo, 
 .main-nav, 
 .user-block, 
 .call-us, 
+.breadcrumbs, 
 .slider, 
 .slider-controls, 
 .promo-left, 
@@ -54,7 +63,9 @@ h3 {
 .subscribe, 
 .social-block, 
 .footer-menu, 
-.made-in {
+.made-in, 
+.item-list, 
+.filters {
   outline: 2px dotted blue; 
 }
 
@@ -66,7 +77,8 @@ h3 {
 
 .main-nav {
   float: left; 
-  width: 600px; 
+  width: 350px; 
+  min-height: 73px; 
 }
 
 .main-menu li {
@@ -80,9 +92,21 @@ h3 {
 .user-block {
   float: right; 
   width: 267px; 
+  min-height: 73px;
+}
+
+.breadcrumbs {
+  float: left; 
+  vertical-align: bottom; 
+  width: 300px; 
+}
+
+.breadcrumbs ul li {
+  display: inline-block; 
 }
 
 .call-us {
+  clear: both; 
   float: right; 
   width: 267px; 
 }
@@ -113,17 +137,17 @@ h3 {
 
 .promo-left {
   float: left; 
-  width: 560px; 
+  width: 48.8%; 
   min-height: 229px; 
 }
 
 .promo-right {
   float: right; 
-  width: 560px; 
+  width: 48.8%; 
   min-height: 229px; 
 }
 
-.items-popular {
+.items-popular, .item-list {
   margin-bottom: 40px; 
   font-size: 0; 
 }
@@ -131,52 +155,58 @@ h3 {
 .item {
   display: inline-block; 
   vertical-align: top; 
-  width: 267px; 
-  margin-right: 26px; 
+  width: 23.2%; 
+  margin-right: 2.4%; 
   font-size: 1rem; 
   outline: 2px dotted orange; 
 }
 
-.item:last-child {
+.item-img-price img {
+  max-width: 100%; 
+  height: auto;
+}
+
+.item:nth-child(4n+4) {
   margin-right: 0; 
 }
 
 .advantages {
-  width: 1146; 
   margin-bottom: 40px; 
   padding: 20px; 
 }
 
 .advantage-left {
   float: left; 
-  width: 540px; 
+  width: 48.8%; 
   outline: 2px dotted orange; 
 }
 
 .advantage-right {
   float: right; 
-  width: 540px; 
+  width: 48.8%; 
   margin-right: 0; 
   outline: 2px dotted orange; 
 }
 
 .blog-news {
   float: left; 
-  width: 560px; 
+  width: 48.8%; 
   min-height: 220px; 
 }
 
 .subscribe {
   float: right; 
-  width: 560px; 
+  width: 48.8%; 
   min-height: 220px; 
 }
 
 .map-block {
-  min-width: 1200px; 
-  min-height: 430px; 
-  margin-top: 40px; 
-  outline: 2px solid red; 
+  width: 100%; 
+  min-height: 430px;  
+  margin-top: 40px;  
+  margin-bottom: 40px; 
+  background-image: url("../img/map.jpg"); 
+  outline: 2px solid yellow; 
 }
 
 .contacts {
@@ -188,9 +218,7 @@ h3 {
 }
 
 .main-footer {
-  width: auto; 
-  margin-top: 40px; 
-  outline: 2px solid red; 
+  min-width: 900px; 
 }
 
 .social-block, 
@@ -201,17 +229,54 @@ h3 {
 
 .social-block {
   float: left; 
-  width: 267px; 
-  margin-right: 26px; 
+  width: 185px; 
 }
 
 .footer-menu {
   float: left; 
-  width: 560px; 
+  width: 326px; 
 }
 
 .made-in {
   float: right; 
-  width: 267px; 
+  width: 188px; 
   background-color: grey; 
+}
+
+.page-navigation {
+  width: 190px; 
+  margin-left: auto; 
+  margin-right: 0; 
+  outline: 2px dotted black; 
+}
+
+.filters {
+  width: 860px; 
+  margin-bottom: 40px; 
+  font-size: 0; 
+}
+
+.filters fieldset {
+  display: inline-block; 
+  vertical-align: top; 
+  padding: 0; 
+  margin: 0; 
+  font-size: 1rem; 
+  background-color: gray;
+}
+
+.sort {
+  width: 195px; 
+}
+
+.price {
+  width: 220px; 
+}
+
+.fatness {
+  width: 415px; 
+}
+
+.filler {
+  width: 705px; 
 }
