@@ -6,13 +6,13 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="container">
+    <header class="main-header">
+      <div class="container clearfix">
         <a class="logo">
-          <img src="img/gllacy-logo.svg" width="154" height="64" alt="GllacyShop">
+          <img src="img/gllacy-logo.svg" width="153" height="63" alt="GllacyShop">
         </a>
         <nav class="main-nav">
-          <ul>
+          <ul class="main-menu">
             <li>
               <a href="#">Каталог</a>
                 <ul class="sub-menu">
@@ -43,16 +43,8 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="slider"> <!-- Слайдер -->
-          <input type="radio" id="btn-1" name="toggle" checked>
-          <input type="radio" id="btn-2" name="toggle">
-          <input type="radio" id="btn-3" name="toggle">
-          <div class="slider-controls">
-              <label for="btn-1"></label>
-              <label for="btn-2"></label>
-              <label for="btn-3"></label>
-          </div>                    
+      <div class="container clearfix">
+        <div class="slider"> <!-- Слайдер -->            
           <div class="slider-inner">
             <div class="slider-slides">
               <div class="slide1">
@@ -72,18 +64,28 @@
               </div>
             </div>                        
           </div>
+          <div class="slider-controls">
+            <input type="radio" id="btn-1" name="toggle" checked>
+            <label for="btn-1"></label>
+            <input type="radio" id="btn-2" name="toggle">
+            <label for="btn-2"></label>
+            <input type="radio" id="btn-3" name="toggle">
+            <label for="btn-3"></label>
+          </div>   
         </div>
-        <div class="promo-1"> <!-- Баннер акции #1 -->
-          <h2 class="promo-title">Малинка даром!</h2>
-          <p class="promo-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn promo-btn" href="#">Хочу варенье!</a>
+        <div class="promo-block clearfix">
+          <div class="promo-left"> <!-- Баннер акции #1 -->
+            <h2 class="promo-title">Малинка даром!</h2>
+            <p class="promo-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="btn promo-btn" href="#">Хочу варенье!</a>
+          </div>
+          <div class="promo-right"> <!-- Баннер акции #2 -->
+            <h2 class="promo-title">Шоколадки даром!</h2>
+            <p class="promo-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
+            <a class="btn promo-btn" href="#">Хочу шоколадки!</a>
+          </div>
         </div>
-        <div class="promo-2"> <!-- Баннер акции #2 -->
-          <h2 class="promo-title">Шоколадки даром!</h2>
-          <p class="promo-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
-          <a class="btn promo-btn" href="#">Хочу шоколадки!</a>
-        </div>
-        <section class="item popular"> <!-- Блок популярного мороженого -->
+        <section class="items-popular"> <!-- Блок популярного мороженого -->
           <div class="item">
             <div class="item-img-price"> <!-- Хит продаж #1 -->
               <img src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое">
@@ -117,15 +119,15 @@
             <a href="#">Быстрый просмотр</a>
           </div>
         </section>
-        <div class="advantages"> <!-- Блок преимуществ -->
+        <div class="advantages clearfix"> <!-- Блок преимуществ -->
           <h1>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
-          <div>
+          <div class="advantage-left">
             <img class="icon-ice" src="img/icons/ice-icon.svg" width="48" height="48" alt="Мороженко">
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             <img class="icon-leaf" src="img/icons/leaf-icon.svg" width="48" height="48" alt="Листик">
             <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из настурального, экологически чистого сырья.</p>
           </div>
-          <div>
+          <div class="advantage-right">
             <img class="icon-cow" src="img/icons/cow-icon.svg" width="48" height="48" alt="Корова">
             <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             <img class="icon-temp" src="img/icons/temp-icon.svg" width="48" height="48" alt="Градусник">
@@ -145,26 +147,28 @@
         </div>
       </div>
       <div class="map-block">
-        <div class="contacts container">
-          <p class="adress">
-            Адрес главного офиса и
-            офлайн магазина:
-            <b>
-              ул. Большая Конюшенная
-              19/8, Санкт-Петербург
-            </b>
-          </p>
-          <p class="tel">
-            Для заказов по телефону
-            <b>8 812 450-25-25</b>
-            (с 10 до 20 ежедневно)
-          </p>
-          <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+        <div class="container clearfix">
+          <div class="contacts">
+            <p class="adress">
+              Адрес главного офиса и
+              офлайн магазина:
+              <b>
+                ул. Большая Конюшенная
+                19/8, Санкт-Петербург
+              </b>
+            </p>
+            <p class="tel">
+              Для заказов по телефону
+              <b>8 812 450-25-25</b>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+          </div>
         </div>
       </div>
     </main>
-    <footer>
-      <div class="container">
+    <footer class="main-footer">
+      <div class="container clearfix">
         <div class="social-block"> <!-- Социальные кнопки -->
           <a class="social-btn social-btn-twit" href="#">TWIT</a>
           <a class="social-btn social-btn-inst" href="#">INST</a>

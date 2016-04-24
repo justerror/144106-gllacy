@@ -27,3 +27,191 @@ h3 {
   color: #353535; 
   font-weight: bold; 
 }
+
+.main-header {
+  min-width: 1200px; 
+  outline: 2px solid red; 
+}
+
+.container {
+  width: 1146px; 
+  margin: 0 auto; 
+  padding: 0 27px; 
+  outline: 2px dashed green; 
+}
+
+.logo, 
+.main-nav, 
+.user-block, 
+.call-us, 
+.slider, 
+.slider-controls, 
+.promo-left, 
+.promo-right, 
+.items-popular, 
+.advantages, 
+.blog-news, 
+.subscribe, 
+.social-block, 
+.footer-menu, 
+.made-in {
+  outline: 2px dotted blue; 
+}
+
+.logo {
+  float: left; 
+  width: 153px; 
+  background-color: grey; 
+}
+
+.main-nav {
+  float: left; 
+  width: 600px; 
+}
+
+.main-menu li {
+  display: inline-block; 
+}
+
+.sub-menu {
+  display: none; 
+}
+
+.user-block {
+  float: right; 
+  width: 267px; 
+}
+
+.call-us {
+  float: right; 
+  width: 267px; 
+}
+
+.clearfix::after {
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+
+.slider {
+  margin-bottom: 40px; 
+  text-align: center; 
+}
+
+.slide2, .slide3 {
+  display: none; 
+}
+
+.slider-controls {
+  display: none; 
+  width: 80px; 
+}
+
+.promo-block {
+  margin-bottom: 40px; 
+}
+
+.promo-left {
+  float: left; 
+  width: 560px; 
+  min-height: 229px; 
+}
+
+.promo-right {
+  float: right; 
+  width: 560px; 
+  min-height: 229px; 
+}
+
+.items-popular {
+  margin-bottom: 40px; 
+  font-size: 0; 
+}
+
+.item {
+  display: inline-block; 
+  vertical-align: top; 
+  width: 267px; 
+  margin-right: 26px; 
+  font-size: 1rem; 
+  outline: 2px dotted orange; 
+}
+
+.item:last-child {
+  margin-right: 0; 
+}
+
+.advantages {
+  width: 1146; 
+  margin-bottom: 40px; 
+  padding: 20px; 
+}
+
+.advantage-left {
+  float: left; 
+  width: 540px; 
+  outline: 2px dotted orange; 
+}
+
+.advantage-right {
+  float: right; 
+  width: 540px; 
+  margin-right: 0; 
+  outline: 2px dotted orange; 
+}
+
+.blog-news {
+  float: left; 
+  width: 560px; 
+  min-height: 220px; 
+}
+
+.subscribe {
+  float: right; 
+  width: 560px; 
+  min-height: 220px; 
+}
+
+.map-block {
+  min-width: 1200px; 
+  min-height: 430px; 
+  margin-top: 40px; 
+  outline: 2px solid red; 
+}
+
+.contacts {
+  float: right; 
+  width: 302px; 
+  min-height: 305px; 
+  background-color: #ffffff; 
+  outline: 2px solid orange; 
+}
+
+.main-footer {
+  width: auto; 
+  margin-top: 40px; 
+  outline: 2px solid red; 
+}
+
+.social-block, 
+.footer-menu, 
+.made-in {
+  outline: 2px dotted orange; 
+}
+
+.social-block {
+  float: left; 
+  width: 267px; 
+  margin-right: 26px; 
+}
+
+.footer-menu {
+  float: left; 
+  width: 560px; 
+}
+
+.made-in {
+  float: right; 
+  width: 267px; 
+  background-color: grey; 
+}
