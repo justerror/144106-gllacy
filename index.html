@@ -2,15 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>GllacyShop - Магазин мороженого</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GllacyShop - Главная</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
+    <header class="main-header">
+      <div class="wrapper"> <!-- START WRAPPER -->
         <div class="container clearfix">
           <a class="logo">
-            <img src="img/gllacy-logo.svg" width="153" height="63" alt="GllacyShop">
+              <img src="img/gllacy-logo.svg" width="153" height="63" alt="GllacyShop">
           </a>
           <nav class="main-nav">
             <ul class="main-menu">
@@ -29,23 +31,28 @@
               </li>
               <li>
                 <a href="#">О Компании</a>
-              </li>          
+              </li>
             </ul>
           </nav>
           <div class="user-block">
-            <div class="search"><img src="img/icons/search-icon.svg" width="16" height="16" alt=""></div>
-            <a class="login" href="#"><img src="img/icons/login-icon.svg" width="20" height="19" alt="">Вход</a>
-            <a class="cart-empty"><img src="img/icons/basket.svg" width="20" height="19" alt="">Пусто</a>
+            <a class="search" href="#"></a>
+            <a class="login" href="#">Вход</a>
+            <a class="cart" href="#">Пусто</a>
           </div>
           <div class="call-us">
             <p class="work-time">С 10 до 20, ежедневно</p>
             <p class="phone-num">8 812 450-25-25</p>
           </div>
         </div>
-      </header>
-      <main>
+      </div> <!-- END WRAPPER -->
+    </header>
+    <main>
+      <div class="wrapper"> <!-- START WRAPPER -->
         <div class="container clearfix">
-          <div class="slider"> <!-- Слайдер -->            
+          <!-- <div class="slider">
+            <input type="radio" id="btn-1" name="toggle" checked>
+            <input type="radio" id="btn-2" name="toggle">
+            <input type="radio" id="btn-3" name="toggle">
             <div class="slider-inner">
               <div class="slider-slides">
                 <div class="slide1">
@@ -63,70 +70,63 @@
                   <p>Пломбир с помадкой и клубничный щербет</p>
                   <a class="btn" href="#">Давайте оба</a>
                 </div>
-              </div>                        
+              </div>
             </div>
             <div class="slider-controls">
-              <input type="radio" id="btn-1" name="toggle" checked>
               <label for="btn-1"></label>
-              <input type="radio" id="btn-2" name="toggle">
               <label for="btn-2"></label>
-              <input type="radio" id="btn-3" name="toggle">
               <label for="btn-3"></label>
-            </div>   
-          </div>
+            </div>
+          </div> -->
           <div class="promo-block clearfix">
             <div class="promo-left"> <!-- Баннер акции #1 -->
-              <h2 class="promo-title">Малинка даром!</h2>
+              <h1>Малинка даром!</h1>
               <p class="promo-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
               <a class="btn promo-btn" href="#">Хочу варенье!</a>
             </div>
             <div class="promo-right"> <!-- Баннер акции #2 -->
-              <h2 class="promo-title">Шоколадки даром!</h2>
-              <p class="promo-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
+              <h1>Шоколадки даром!</h1>
+              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
               <a class="btn promo-btn" href="#">Хочу шоколадки!</a>
             </div>
           </div>
           <section class="items-popular"> <!-- Блок популярного мороженого -->
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #1 -->
-                <img src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>310</b> <img src="img/icons/rouble.svg" width="27" height="32" alt="р."> /кг</p>
+                <img class="item-img" src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое">
+                <p><b>310</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
               </div>
               <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-              <a href="#">Быстрый просмотр</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #2 -->
-                <img src="img/items/coffee-chocolate.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>380</b> <img src="img/icons/rouble.svg" width="27" height="32" alt="р."> /кг</p>
-              </div>
-              <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-              <a href="#">Быстрый просмотр</a> 
+                <img class="item-img" src="img/items/coffee-chocolate.jpg" width="267" height="267" alt="Мороженое">
+                <p><b>380</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
+                </div>
+                <a href="#">Сливочно-кофейное с кусочками шоколада</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #3 -->
-                <img src="img/items/strawberry-chocolate.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>355</b> <img src="img/icons/rouble.svg" width="27" height="32" alt="р."> /кг</p>
+                <img class="item-img" src="img/items/strawberry-chocolate.jpg" width="267" height="267" alt="Мороженое">
+                <p><b>355</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
               </div>
               <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-              <a href="#">Быстрый просмотр</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #4 -->
-                <img src="img/items/cream-caramel.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>415</b> <img src="img/icons/rouble.svg" width="27" height="32" alt="р."> /кг</p>
+                <img class="item-img" src="img/items/cream-caramel.jpg" width="267" height="267" alt="Мороженое">
+                <p><b>415</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
               </div>
               <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-              <a href="#">Быстрый просмотр</a>
             </div>
           </section>
           <div class="advantages clearfix"> <!-- Блок преимуществ -->
-            <h1>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
+            <h1>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
             <div class="advantage-left">
               <img class="icon-ice" src="img/icons/ice-icon.svg" width="48" height="48" alt="Мороженко">
               <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
               <img class="icon-leaf" src="img/icons/leaf-icon.svg" width="48" height="48" alt="Листик">
-              <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из настурального, экологически чистого сырья.</p>
+              <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </div>
             <div class="advantage-right">
               <img class="icon-cow" src="img/icons/cow-icon.svg" width="48" height="48" alt="Корова">
@@ -137,46 +137,52 @@
           </div>
           <div class="blog-news"> <!-- Новости блога -->
             <h2>Новое в нашем блоге</h2>
-            <h3><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
+            <a href="#">10 способов сервировки <br> фруктовых щербетов <br> к столу</a>
           </div>
           <div class="subscribe"> <!-- Рассылка -->
+            <div class="subscribe-content-bg">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
             <form action="https://echo.htmlacademy.ru/" method="post">
-              <input type="email" name="user-email" placeholder="Электронная почта">
-              <button type="submit">Отправить</button>
+              <button class="btn btn-subscribe" type="submit">Отправить</button>
+              <div style="overflow: hidden; padding-right: 10px;">
+                <input type="email" name="user-email" placeholder="Электронная почта">
+              </div>
             </form>
+            </div>
           </div>
         </div>
-      </main>
-    </div>
-    <div class="map-block">
-        <div class="container clearfix">
-          <div class="contacts">
-            <p class="adress">
-              Адрес главного офиса и
-              офлайн магазина:
-              <b>
-                ул. Большая Конюшенная
-                19/8, Санкт-Петербург
-              </b>
-            </p>
-            <p class="tel">
-              Для заказов по телефону
-              <b>8 812 450-25-25</b>
-              (с 10 до 20 ежедневно)
-            </p>
-            <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+      </div> <!-- END WRAPPER -->
+      <div class="map-block">
+        <div class="wrapper"> <!-- START WRAPPER -->
+          <div class="container clearfix">
+            <div class="contacts">
+              <p class="adress">
+                Адрес главного офиса и<br>
+                офлайн магазина:<br>
+                <b>
+                  ул. Большая Конюшенная<br>
+                  19/8, Санкт-Петербург
+                </b>
+              </p>
+              <p class="tel">
+                Для заказов по телефону:<br>
+                <b>8 812 450-25-25</b><br>
+                (с 10 до 20 ежедневно)
+              </p>
+              <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+            </div>
           </div>
-        </div>
-    </div>
-    <div class="wrapper">
-      <footer class="main-footer">
+        </div> <!-- END WRAPPER -->
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="wrapper"> <!-- START WRAPPER -->
         <div class="container clearfix">
           <div class="social-block"> <!-- Социальные кнопки -->
-            <a class="social-btn social-btn-twit" href="#">TWIT</a>
-            <a class="social-btn social-btn-inst" href="#">INST</a>
-            <a class="social-btn social-btn-fb" href="#">FB</a>
-            <a class="social-btn social-btn-vk" href="#">VK</a>
+            <a class="social-btn twit" href="#"></a>
+            <a class="social-btn inst" href="#"></a>
+            <a class="social-btn fb" href="#"></a>
+            <a class="social-btn vk" href="#"></a>
           </div>
           <div class="footer-menu"> <!-- Меню подвала -->
             <div class="footer-menu-left">
@@ -190,12 +196,12 @@
           </div>
           <div class="made-in"> <!-- Копирайт -->
             <a class="htmla-logo" href="https://htmlacademy.ru/">
-               <img src="img/htmla-logo.svg" width="108" height="37" alt="Логотип HTML Academy">
+                <img src="img/htmla-logo.svg" width="108" height="37" alt="Логотип HTML Academy">
             </a>
             <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
           </div>
         </div>
-      </footer>
-    </div>
+      </div> <!-- END WRAPPER -->
+    </footer>
   </body>
 </html>
