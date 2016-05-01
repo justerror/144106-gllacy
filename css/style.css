@@ -73,8 +73,11 @@ body {
   font-weight: 400;
   font-family: "Roboto", "Arial", sans-serif;
   background-color: #849d8f;
-  outline: 4px dashed red;
   color: white;
+}
+
+.wrap { /* Нужен для работы слайдера: смена фона страницы */
+  min-width: 900px;
 }
 
 .wrapper {
@@ -87,15 +90,12 @@ body {
   max-width: 1200px;
   padding: 0 2.25%;
   margin: 0 auto;
-  outline: 2px dashed green;
 }
 
 
 
   /* Header */
 
-.slider,
-.slider-controls,
 .item-list,
 .filters {
   outline: 2px dotted blue;
@@ -116,7 +116,7 @@ body {
 }
 
 .main-menu {
-  margin-left: -10px;
+  margin-left: -15px;
 }
 
 .main-menu > li {
@@ -375,7 +375,7 @@ body {
 
 .cart.cart-full {
   color: #323232;
-  background-image: url("../img/icons/basket-full.svg");
+  background: #f7f6f3 url("../img/icons/basket-full.svg") 20% center no-repeat;
 }
 
 .cart-field {
@@ -499,19 +499,87 @@ body {
 
   /* Main */
 
+          /* Слайдер. START */
+
 .slider {
-  margin-bottom: 40px;
+  position: relative;
+  height: 525px;
+  padding-top: 270px;
+  margin: 0 auto;
+}
+
+.slide1, /* Область текста слайдера с кнопкой */
+.slide2,
+.slide3 {
+  display: none;
+  width: 700px;
+  margin: 0 auto;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 900;
   text-align: center;
 }
 
-.slide2, .slide3 {
+.slide1 a, /* Кнопка слайдера */
+.slide2 a,
+.slide3 a  {
+  height: 63px;
+  padding: 8px 40px;
+  margin-top: 31px;
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  border-radius: 32px;
+}
+
+input[type="radio"] { /* Скрываем стандартные радио-кнопки */
   display: none;
 }
 
-.slider-controls {
-  display: none;
-  width: 80px;
+.slider-controls { /* Область для собственных кнопок слайдера */
+  position: absolute;
+  bottom: 52px;
+  font-size: 0;
 }
+
+.slider-controls label { /* Создаем новые кнопки для слайдера */
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+#slide1:checked ~ .wrap .slider-controls label[for="slide1"], /* Закрашиваем активную кнопку */
+#slide2:checked ~ .wrap .slider-controls label[for="slide2"],
+#slide3:checked ~ .wrap .slider-controls label[for="slide3"] {
+  background-color: #ffffff;
+}
+
+#slide1:checked ~ .wrap {
+  background: #849d8f url("../img/sliders/ice-slider1.png") 50% 0 no-repeat;
+}
+#slide2:checked ~ .wrap { /* Когда нажата вторая кнопка, изменится фон и картинка обертки .wrap */
+  background: #8996a6 url("../img/sliders/ice-slider2.png") 50% 0 no-repeat;
+}
+#slide3:checked ~ .wrap {
+  background: #9d8b84 url("../img/sliders/ice-slider3.png") 50% 0 no-repeat;
+}
+#slide1:checked ~ .wrap .slider-slides .slide1 {
+  display:block;
+}
+
+#slide2:checked ~ .wrap .slider-slides .slide2 { /* Когда нажата вторая кнопка, будет показан текст и кнопка второго слайдера */
+  display:block;
+}
+#slide3:checked ~ .wrap .slider-slides .slide3 {
+  display:block;
+}
+
+          /* Слайдер. END */
+
 
 .promo-block {
   margin-bottom: 40px;
@@ -521,7 +589,7 @@ body {
   position: relative;
   float: left;
   width: 48.867%;
-  min-height: 230px;
+  min-height: 229px;
   padding: 16px 18px 88px 18px;
   background: url("../img/rapsberry-bg.jpg");
   border-radius: 15px;
@@ -531,7 +599,7 @@ body {
   position: relative;
   float: right;
   width: 48.867%;
-  min-height: 230px;
+  min-height: 229px;
   padding: 16px 18px 88px 18px;
   background: url("../img/choco-bg.jpg");
   border-radius: 15px;
@@ -840,11 +908,13 @@ body {
 
 .page-nav {
   text-align: right;
+  font-size: 5px;
 }
 
 .page-nav a {
   display: inline-block;
   text-align: center;
+  vertical-align: middle;
   width: 27px;
   height: 27px;
   font-size: 16px;
@@ -852,11 +922,25 @@ body {
   color: #ffffff;
   border-radius: 50%;
   text-decoration: none;
+
+}
+
+.page-nav .prev{
+  background: url("../img/icons/arrow.svg") center no-repeat;
+}
+
+.page-nav .next {
+  background: url("../img/icons/arrow.svg") center no-repeat;
 }
 
 .page-nav .active {
   color: #000000;
   background: #ffffff;
+}
+
+.page-nav .disabled {
+  opacity: 0.2;
+  transform: rotate(180deg);
 }
 
   /* Filters */
