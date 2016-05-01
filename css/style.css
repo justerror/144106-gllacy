@@ -6,6 +6,7 @@ ol,
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 p {
@@ -32,12 +33,14 @@ h2 {
   font-family: "Roboto", "Arial", sans-serif;
 }
 
-.btn {
+
+
+.btn { /* Общий стиль кнопок сайта */
   display: inline-block;
   vertical-align: top;
   height: 46px;
   padding: 11px 22px;
-  background-color: #e74a35;
+  background: linear-gradient(to bottom, #f26843, #e74a35);
   text-align: center;
   text-decoration: none;
   color: #ffffff;
@@ -47,7 +50,19 @@ h2 {
   border-radius: 23px;
   border: none;
   outline: none;
+  box-shadow:  0 1px 3px 0 #ac1000;
 }
+
+.btn:hover {
+  background: linear-gradient(to bottom, #f58669, #ec6f5e);
+}
+
+.btn:active {
+  background: linear-gradient(to bottom, #d74632, #e1613e);
+  box-shadow: inset 0 2px 3px 0 #942718;
+}
+
+
 
 body {
   min-width: 900px;
@@ -75,14 +90,16 @@ body {
   outline: 2px dashed green;
 }
 
+
+
+  /* Header */
+
 .slider,
 .slider-controls,
 .item-list,
 .filters {
   outline: 2px dotted blue;
 }
-
-  /* Header */
 
 .logo {
   float: left;
@@ -94,7 +111,7 @@ body {
 
 .main-nav {
   float: left;
-  width: 410px;
+  width: 380px;
   margin-top: 22px;
 }
 
@@ -123,68 +140,102 @@ body {
   background-color: #d07058;
 }
 
-.main-menu li:not(.active):hover {
+.main-menu > li:not(.active):hover {
   background-color: #ffffff;
   cursor: pointer;
 }
 
-.main-menu a:not(.active-a):hover {
+.main-menu > li:not(.active):hover a {
    color: #000000;
 }
 
-.main-menu li:not(.active):active {
+.main-menu > li:not(.active):active {
   background-color: #ffffff;
   cursor: pointer;
   box-shadow: inset 0 1px 3px 0 #000000;
 }
 
-.sub-menu {
+.main-menu > li:hover .sub-menu { /* Отображает суб-меню при наведении на кнопку */
+  display: block;
+}
+
+.sub-menu { /* Подменю */
   position: absolute;
   z-index: 100;
   left: -7px;
   top: 40px;
-  padding: 0;
   margin: 0;
   list-style: none;
-  background: grey;
+  background: #ffffff;
   font-size: 14px;
   line-height: 16px;
   width: 143px;
   border-radius: 5px;
   display: none;
+  text-indent: 7px;
+  padding: 5px 0;
+  font-weight: 400;
+}
+
+.sub-menu li:first-child::after { /* Полоска в подменю */
+  content: '';
+  display: block;
+  height: 1px;
+  margin-left: 6px;
+  margin-right: 9px;
+  background-color: #d1d0ce;
 }
 
 .sub-menu a {
   color: #000000;
 }
 
-.main-menu > li:hover .sub-menu {
-    display: block;
+.sub-menu::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  height: 10px;
+  width: 100%;
+}
+
+.sub-menu li:hover {
+  background-color: #fbded7;
+}
+
+.sub-menu li:active {
+  background-color: #f6b5a5;
+}
+
+.sub-menu .active {
+  color: #ffffff;
+  background-color: #d07058;
 }
 
 .user-block {
   float: right;
-  width: 270px;
+  width: 280px;
   margin-top: 23px;
   text-align: right;
   font-size: 0;
   line-height: 16px;
   font-weight: 500;
+  position: relative;
 }
 
-.user-block a {
+.user-block > div {
   margin-right: 10px;
   font-size: 14px;
   text-decoration: none;
   color: #ffffff;
 }
 
-.user-block a:last-child {
+.user-block > div:last-child {
   margin-right: 0;
 }
 
-.search {
+.search { /* Кнопка поиска */
   display: inline-block;
+  position: relative;
   vertical-align: top;
   width: 32px;
   height: 32px;
@@ -193,9 +244,50 @@ body {
   border-radius: 50%;
 }
 
-.login {
+.search:hover {
+  background: #f8f7f4 url("../img/icons/search-icon-hover.svg") center no-repeat;
+}
+
+.search:hover .search-field {
+  display: block;
+}
+
+.search-field {
+  display: none;
+  width: 340px;
+  height: 84px;
+  background-color: #f8f7f4;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.search-field::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  height: 37px;
+  width: 50%;
+  right: 0;
+}
+
+.search-field input {
+  width: 90%;
+  margin-top: 20px;
+  line-height: 42px;
+  border: 1px solid #d3d3d2;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 14px;
+}
+
+.login { /* Кнопка логина */
   display: inline-block;
   vertical-align: top;
+  position: relative;
   width: 92px;
   height: 32px;
   padding-top: 9px;
@@ -205,7 +297,70 @@ body {
   border-radius: 25px;
 }
 
-.cart {
+.login-field {
+  display: none;
+  width: 277px;
+  height: 214px;
+  background-color: #f8f7f4;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  z-index: 10;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-field input {
+  display: block;
+  width: 86.7%;
+  margin: 20px auto;
+  line-height: 42px;
+  border: 1px solid #d3d3d2;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 14px;
+}
+
+.login-field button {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.login-field p {
+  text-align: left;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.login-field a {
+  color: #323232;
+  text-decoration: none;
+  border-bottom: 1px solid #adacaa;
+}
+
+.login:hover {
+  background: #f8f7f4 url("../img/icons/login-icon-hover.svg") 20% center no-repeat;
+  color: #000000;
+}
+
+.login:hover .login-field {
+  display: block;
+}
+
+.login-field::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  height: 37px;
+  width: 36%;
+  right: 0;
+}
+
+.cart { /* Корзина */
+  position: relative;
+  font-size: 14px;
   display: inline-block;
   vertical-align: top;
   text-align: left;
@@ -218,7 +373,88 @@ body {
   border-radius: 25px;
 }
 
-.breadcrumbs {
+.cart.cart-full {
+  color: #323232;
+  background-image: url("../img/icons/basket-full.svg");
+}
+
+.cart-field {
+  display: none;
+  width: 540px;
+  min-height: 240px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  z-index: 10;
+  border-radius: 5px;
+  padding: 20px 9px 80px 17px;
+}
+
+.cart:hover .cart-field {
+  display: block;
+}
+
+.cart-field::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  height: 37px;
+  width: 23%;
+  right: 0;
+}
+
+.cart-list { /* Список в корзине сделан таблицей */
+  display: table;
+  font-size: 13px;
+  font-weight: 400px;
+}
+
+.cart-list ul {
+  display: table-row;
+}
+
+.cart-list li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cart-list ul li:nth-child(3) {
+  text-align: left;
+}
+
+.column1 {
+  display: table-column;
+  width: 2%;
+}
+
+.column2 {
+  display: table-column;
+  width: 10%;
+}
+
+.column3 {
+  display: table-column;
+}
+
+.column4 {
+  display: table-column;
+  width: 25%;
+}
+
+.column5 {
+  display: table-column;
+  width: 20%;
+}
+
+.checkout { /* Кнопка "Оформить заказ" */
+  position: absolute;
+  bottom: 19px;
+  right: 12px;
+}
+
+.breadcrumbs { /* Хлебные крошки */
   float: left;
   width: 300px;
 }
@@ -492,7 +728,7 @@ body {
 .map-block {
   min-height: 430px;
   margin-top: 40px;
-  background-image: url("../img/map.jpg");
+  background: url("../img/map.jpg") center no-repeat;
 }
 
 .contacts {
@@ -666,4 +902,6 @@ body {
   width: 705px;
 }
 
-
+iframe {
+  position: absolute;
+}
