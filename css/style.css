@@ -580,6 +580,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
           /* Слайдер. END */
 
+          /* Промо-блок из двух баннеров. START */
 
 .promo-block {
   margin-bottom: 40px;
@@ -627,8 +628,21 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   bottom: 24px;
 }
 
-.items-popular, .item-list {
+          /* Промо-блок из двух баннеров. END */
+
+          /* Стилизация товара (мороженок). START */
+
+.items-popular, .item-list { /* Убираем отступы между инлайн-блоками */
   font-size: 0;
+}
+
+.items-popular .item::before { /* Навешиваем иконку "Хит" на блок с популярными */
+  content: '';
+  position: absolute;
+  z-index: 10;
+  width: 61px;
+  height: 61px;
+  background: url(../img/icons/popular-icon.png);
 }
 
 .item {
@@ -636,29 +650,19 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   vertical-align: top;
   width: 23.299%;
   margin-right: 2.269%;
-  font-size: 16px;
   margin-bottom: 40px;
+  font-size: 16px; /* Восстанавливаем размер шрифта */
 }
 
 .item:nth-child(4n) {
   margin-right: 0;
 }
 
-.items-popular .item::before {
-  content: '';
-  position: absolute;
-  width: 61px;
-  height: 61px;
-  background: url(../img/icons/popular-icon.png);
-  z-index: 10;
-}
-
 .item a {
   display: block;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
 }
-
 
 .item-img {
   max-width: 100%;
@@ -686,7 +690,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   font-weight: 700;
 }
 
-.rouble {
+.rouble { /* Иконка рубля. Переделать через псевдокласс */
   width: 27px;
   height: 32px;
 }
@@ -694,6 +698,10 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 .quick-show {
   display: none !important;
 }
+
+          /* Стилизация товара (мороженок). END */
+
+
 
 .advantages {
   padding: 24px 21px 14px 21px;
@@ -797,6 +805,10 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   min-height: 430px;
   margin-top: 40px;
   background: url("../img/map.jpg") center no-repeat;
+}
+
+iframe {
+  width: 100%;
 }
 
 .contacts {
