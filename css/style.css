@@ -950,14 +950,14 @@ iframe {
 .main-footer {
   min-height: 84px;
   margin-top: 20px;
-  font-size: 0;
- }
+  font-size: 12px;
+}
 
 .social-block {
-  display: inline-block;
-  vertical-align: top;
-  outline: 1px solid;
-
+  float: left;
+  width: 23.299%;
+  margin-top: 16px;
+  margin-right: 2.269%;
 }
 
 .social-btn {
@@ -968,7 +968,6 @@ iframe {
   margin-right: 12px;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-
 }
 
 .twit {
@@ -988,23 +987,27 @@ iframe {
 }
 
 .footer-menu {
-  display: inline-block;
-  vertical-align: top;
-  outline: 1px solid;
-  font-size: 12px;
-  width: 300px;
+  float: left;
+  width: 48.867%;
+  margin-top: 12px;
+  font-size: 13px;
 }
-
 
 .footer-menu-left {
   float: left;
-  width: 50%;
+  width: 48.5%;
+  padding-left: 22%;
 }
 
-.footer-menu-right{
-  float:right;
-  width: 50%;
+.footer-menu-right {
+  float: right;
+  width: 51.5%;
 }
+
+.footer-menu-left a, .footer-menu-right a {
+  color: #ffffff;
+}
+
 
 .heart {
   position: relative;
@@ -1024,14 +1027,10 @@ iframe {
 
 
 .made-in {
-  display: inline-block;
-  vertical-align: top;
+  float: right;
+  width: 23.299%;
   text-align: right;
-  outline: 1px solid;
-  font-size: 12px;
-
- }
-
+}
 
 .htmla-logo {
   margin-right: 80px;
@@ -1040,7 +1039,6 @@ iframe {
 .made-in p {
   margin-top: -5px;
 }
-
 
 
 .page-nav {           /* Пагинатор страниц */
