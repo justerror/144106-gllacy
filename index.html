@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GllacyShop - Главная</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -46,18 +47,20 @@
             </div>
             <div class="login">Вход
               <div class="login-field">
-                <input type="email" placeholder="Электронная почта">
-                <input type="password" placeholder="Пароль">
-                <button class="btn">Войти</button>
-                <p><a href="#">Забыли пароль?</a></p>
-                <p><a href="#">Новая регистрация</a></p>
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                  <input type="email" name="login" placeholder="Электронная почта">
+                  <input type="password" name="password" placeholder="Пароль">
+                  <button class="btn" type="submit">Войти</button>
+                </form>
+                <p><a class="link" href="#">Забыли пароль?</a></p>
+                <p><a class="link" href="#">Новая регистрация</a></p>
               </div>
             </div>
             <div class="cart">Пусто</div>
           </div>
           <div class="call-us">
-            <p class="work-time">С 10 до 20, ежедневно</p>
-            <p class="phone-num">8 812 450-25-25</p>
+            <p>С 10 до 20, ежедневно</p>
+            <b>8 812 450-25-25</b>
           </div>
         </div>
       </div> <!-- END WRAPPER -->
@@ -96,7 +99,7 @@
             </div>
             <div class="promo-right"> <!-- Баннер акции #2 -->
               <h1>Шоколадки даром!</h1>
-              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
+              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
               <a class="btn promo-btn" href="#">Хочу шоколадки!</a>
             </div>
           </div>
@@ -104,30 +107,30 @@
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #1 -->
                 <img class="item-img" src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>310</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
+                <p><b>310</b>/кг</p>
               </div>
-              <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #2 -->
                 <img class="item-img" src="img/items/coffee-chocolate.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>380</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
+                <p><b>380</b>/кг</p>
                 </div>
-                <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                <a class="link" href="#">Сливочно-кофейное с кусочками шоколада</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #3 -->
                 <img class="item-img" src="img/items/strawberry-chocolate.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>355</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
+                <p><b>355</b>/кг</p>
               </div>
-              <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a class="link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #4 -->
                 <img class="item-img" src="img/items/cream-caramel.jpg" width="267" height="267" alt="Мороженое">
-                <p><b>415</b> <img class="rouble" src="img/icons/rouble.svg" width="27" height="32" alt="р.">/кг</p>
+                <p><b>415</b>/кг</p>
               </div>
-              <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              <a class="link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </div>
           </section>
           <div class="advantages clearfix"> <!-- Блок преимуществ -->
@@ -147,14 +150,14 @@
           </div>
           <div class="blog-news"> <!-- Новости блога -->
             <h2>Новое в нашем блоге</h2>
-            <a href="#">10 способов сервировки <br> фруктовых щербетов <br> к столу</a>
+            <a href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
           </div>
           <div class="subscribe"> <!-- Рассылка -->
             <div class="subscribe-content-bg">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <button class="btn btn-subscribe" type="submit">Отправить</button>
-              <div style="overflow: hidden; padding-right: 10px;">
+              <div style="overflow: hidden; padding-right: 11px;">
                 <input type="email" name="user-email" placeholder="Электронная почта">
               </div>
             </form>
@@ -189,31 +192,42 @@
     <footer class="main-footer">
       <div class="wrapper"> <!-- START WRAPPER -->
         <div class="container clearfix">
-          <div class="social-block"> <!-- Социальные кнопки -->
+          <div class="social-block clearfix">
             <a class="social-btn twit" href="#"></a>
             <a class="social-btn inst" href="#"></a>
             <a class="social-btn fb" href="#"></a>
             <a class="social-btn vk" href="#"></a>
           </div>
-          <div class="footer-menu"> <!-- Меню подвала -->
+          <div class="footer-menu">
             <div class="footer-menu-left">
-              <a href="#"><b>Для поставщиков</b></a>
-              <a href="#">О производстве</a>
+              <p><a class="link heart" href="#">Для поставщиков</a></p>
+              <p><a class="link" href="#">О производстве</a></p>
             </div>
             <div class="footer-menu-right">
-              <a href="#">Наши документы</a>
-              <a href="#">Экологические стандарты</a>
+              <p><a class="link" href="#">Наши документы</a></p>
+              <p><a class="link" href="#">Экологические стандарты</a></p>
             </div>
           </div>
-          <div class="made-in"> <!-- Копирайт -->
+          <div class="made-in">
             <a class="htmla-logo" href="https://htmlacademy.ru/">
                 <img src="img/htmla-logo.svg" width="108" height="37" alt="Логотип HTML Academy">
             </a>
-            <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
-          </div>
+            <p>Сделано в <a class="link" href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
+            </div>
         </div>
       </div> <!-- END WRAPPER -->
     </footer>
+    <div class="popup-feedback">
+      <p>Мы обязательно вам ответим!</p>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <input type="text" id="feedback-name-field" name="name" placeholder="Как вас зовут?">
+          <input type="email" id="feedback-email-field" name="email" placeholder="Ваша почта ответа?">
+          <textarea id="comment" name="comment" > Напишите что-нибудь...</textarea>
+          <button class="btn" type="submit">Отправить</button>
+          <a class="close-btn">Закрыть</a>
+        </form>
+    </div>
+    <div class="overlay"></div>
     </div>
   </body>
 </html>
