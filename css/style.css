@@ -70,11 +70,36 @@ h2 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+input::-webkit-input-placeholder { /*Стилизуем placeholderы*/
+  color: #999999;
+  font-weight: 400;
+
+}input:-ms-input-placeholder { /*Стилизуем placeholderы*/
+  color: #999999;
+  font-weight: 400;
+}
+
+input::-moz-placeholder { /*Стилизуем placeholderы*/
+  color: #999999;
+  font-weight: 400;
+}
+
+input {
+  color: #323232;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  outline: none;
+}
+
+
 hr {
   border: none; /
   color: rgba(254, 254, 254, 0.3);
   background-color: rgba(254, 254, 254, 0.3);
   height: 1px;
+  margin-left: 2.25%;
+  margin-right: 2.25%;
 }
 
 body {
@@ -130,16 +155,16 @@ body {
   position: relative;
   display: inline-block;
   vertical-align: top;
+  height: 32px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   border-radius: 15px;
-  height: 32px;
 }
 
 .main-menu a {
   display: block;
-  margin: 8px 13px;
+  margin: 7px 13px;
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -174,21 +199,21 @@ body {
 }
 
 .sub-menu { /* Подменю */
+  display: none;
   position: absolute;
   z-index: 100;
   left: -7px;
   top: 40px;
+  text-indent: 7px;
+  min-width: 143px;
+  padding: 5px 0;
   margin: 0;
   list-style: none;
   background: #ffffff;
   font-size: 14px;
   line-height: 16px;
-  min-width: 143px;
-  border-radius: 5px;
-  display: none;
-  text-indent: 7px;
-  padding: 5px 0;
   font-weight: 400;
+  border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -629,7 +654,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   float: left;
   width: 48.867%;
   min-height: 229px;
-  padding: 16px 18px 88px 18px;
+  padding: 16px 18px 88px 19px;
   background: url("../img/rapsberry-bg.jpg") -27px -94px no-repeat;
   border-radius: 15px;
 }
@@ -639,7 +664,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   float: right;
   width: 48.867%;
   min-height: 229px;
-  padding: 16px 18px 88px 18px;
+  padding: 16px 18px 88px 19px;
   background: url("../img/choco-bg.jpg") -218px -104px no-repeat;
   border-radius: 15px;
 }
@@ -806,6 +831,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
+  margin-left: -2px;
 }
 
 .advantages img {
@@ -978,6 +1004,7 @@ iframe {
 .social-btn:hover {
   opacity: 1;
   border: 3px solid rgba(255, 255, 255, 1);
+
 }
 
 .social-btn:active {
@@ -1034,16 +1061,17 @@ iframe {
 
 .heart {
   position: relative;
+  font-weight: 700;
 }
 
 
 .heart::before {
   content: "";
   position: absolute;
-  left: -20px;
+  left: -22px;
   top: 1px;
-  width: 14px;
-  height: 12px;
+  width: 15px;
+  height: 13px;
   background: url("../img/icons/heart.svg") center no-repeat;
 }
 
@@ -1068,23 +1096,25 @@ iframe {
 
 .page-nav {           /* Пагинатор страниц */
   text-align: right;
-  font-size: 5px;
+  font-size: 12px;
   margin-top: 42px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  margin-right: -9px;
 }
 
 .page-nav a {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  width: 27px;
-  height: 27px;
+  width: 26px;
+  height: 26px;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 26px;
   color: #ffffff;
   border-radius: 50%;
   text-decoration: none;
 }
+
 
 .page-nav a:not(.prev):not(.next):hover {
   background: rgba(255, 255, 255, 0.2);
@@ -1096,11 +1126,17 @@ iframe {
 }
 
 .page-nav .prev{
+  width: 27px;
+  height: 27px;
   background: url("../img/icons/arrow.svg") center no-repeat;
+  margin-right: 2px;
 }
 
 .page-nav .next {
+  width: 27px;
+  height: 27px;
   background: url("../img/icons/arrow.svg") center no-repeat;
+  margin-left: 4px;
 }
 
 .page-nav .active {
@@ -1145,13 +1181,16 @@ iframe {
 .filters button {
   display: inline-block;
   background: #a6b8ae;
-  padding: 5px 27px;
+  padding: 7px 27px 7px 28px;
   border-radius: 20px;
   border: 2px solid #ffffff;
   font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
   color: #ffffff;
   cursor: pointer;
   margin-top: 22px;
+  margin-left: -2px;
 }
 
 .filters button:hover {
@@ -1202,13 +1241,13 @@ iframe {
 
           /* Цена */
 
-.price-filter{
+.price-filter {
   width: 218px;
-    margin-right: 15px;
+
 }
 
 .scale{
-  margin: 9px 5px;
+  margin: 9px 10px;
   height: 4px;
   background-color: #d1dad3;
 }
@@ -1248,9 +1287,25 @@ iframe {
 .fatness input[type="radio"] + label {
   display: inline-block;
   margin-left: 11px;
-  padding-left: 32px;
+  padding-left: 29px;
   position: relative;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.fatness input[type="radio"] + label:nth-of-type(2) {
+  margin-left: 16px;
+}
+
+
+.fatness input[type="radio"] + label:nth-of-type(3) {
+  margin-left: 17px;
+}
+
+.fatness input[type="radio"] + label:nth-of-type(4) {
+  margin-left: 16px;
 }
 
 .fatness input[type="radio"] + label::before {
@@ -1261,8 +1316,8 @@ iframe {
   border: 1px solid #ffffff;
   box-shadow: inset 0 0 0 3px #a8b9af;
   border-radius: 50%;
-  top: 1px;
-  left: 0;
+  top: -1px;
+  left: -1px;
 }
 
 .fatness input[type="radio"]:checked + label::before {
@@ -1289,11 +1344,29 @@ iframe {
 
 .filler input[type="checkbox"] + label {
   display: inline-block;
-
   margin-left: 11px;
   padding-left: 32px;
   position: relative;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filler input[type="checkbox"] + label:nth-of-type(2) {
+  margin-left: 16px
+}
+
+.filler input[type="checkbox"] + label:nth-of-type(3) {
+  margin-left: 16px
+}
+
+.filler input[type="checkbox"] + label:nth-of-type(4) {
+  margin-left: 20px
+}
+
+.filler input[type="checkbox"] + label:nth-of-type(5) {
+  margin-left: 16px
 }
 
 .filler input[type="checkbox"] + label::before {
@@ -1302,8 +1375,8 @@ iframe {
   width: 20px;
   height: 20px;
   border: 1px solid #ffffff;
-  border-radius: 5px;
-  top: 1px;
+  border-radius: 4px;
+  top: -1px;
   left: 0;
 }
 
@@ -1321,7 +1394,7 @@ iframe {
 .input-area {
   display: block;
   position: relative;
-  padding: 7px 10px;
+  padding: 7px 5px;
   background-color: #a8b9af;
   border-radius: 20px;
   color: #ffffff;
@@ -1435,6 +1508,22 @@ iframe { /* Интерактивная карта */
 
 .popup-feedback .btn {
   float: right;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover{
+  border-color: #c7c6c5;
+  box-shadow: inset 0 0 0 1px #c7c6c5;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #8fbdec;
+  box-shadow: inset 0 0 0 1px #8fbdec;
 }
 
         /* Фидбэк. END */
