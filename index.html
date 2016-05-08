@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GllacyShop - Главная</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=cyrillic,latin" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <input type="radio" id="slide1" name="toggle" checked>
-    <input type="radio" id="slide2" name="toggle">
-    <input type="radio" id="slide3" name="toggle">
+    <input type="radio" class="slide1" id="slide1" name="toggle" checked>
+    <input type="radio" class="slide2" id="slide2" name="toggle">
+    <input type="radio" class="slide3" id="slide3" name="toggle">
     <div class="wrap"> <!-- Для изменения фона через слайдер -->
     <header class="main-header">
       <div class="wrapper"> <!-- START WRAPPER -->
         <div class="container clearfix">
           <a class="logo">
-              <img src="img/gllacy-logo.svg" width="153" height="63" alt="GllacyShop">
+              <img src="img/gllacy-logo.svg" width="153" height="63" alt="Логотип GllacyShop">
           </a>
           <nav class="main-nav">
             <ul class="main-menu">
@@ -108,28 +108,28 @@
           <section class="items-popular"> <!-- Блок популярного мороженого -->
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #1 -->
-                <img class="item-img" src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое">
+                <img class="item-img" src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 <p><b>310</b>/кг</p>
               </div>
               <a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #2 -->
-                <img class="item-img" src="img/items/coffee-chocolate.jpg" width="267" height="267" alt="Мороженое">
+                <img class="item-img" src="img/items/coffee-chocolate.jpg" width="267" height="267" alt="Мороженое Сливочно-кофейное с кусочками шоколада">
                 <p><b>380</b>/кг</p>
                 </div>
                 <a class="link" href="#">Сливочно-кофейное с кусочками шоколада</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #3 -->
-                <img class="item-img" src="img/items/strawberry-chocolate.jpg" width="267" height="267" alt="Мороженое">
+                <img class="item-img" src="img/items/strawberry-chocolate.jpg" width="267" height="267" alt="Мороженое Сливочно-клубничное с присыпкой из белого шоколада">
                 <p><b>355</b>/кг</p>
               </div>
               <a class="link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </div>
             <div class="item">
               <div class="item-img-price"> <!-- Хит продаж #4 -->
-                <img class="item-img" src="img/items/cream-caramel.jpg" width="267" height="267" alt="Мороженое">
+                <img class="item-img" src="img/items/cream-caramel.jpg" width="267" height="267" alt="Мороженое Сливочное крем-брюле с карамельной подливкой">
                 <p><b>415</b>/кг</p>
               </div>
               <a class="link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -156,7 +156,7 @@
           </div>
           <div class="subscribe"> <!-- Рассылка -->
             <div class="subscribe-content-bg">
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <button class="btn btn-subscribe" type="submit">Отправить</button>
               <div class="input-email-subscribe-fix">
@@ -174,15 +174,15 @@
             <div class="contacts">
               <p class="adress">
                 Адрес главного офиса и<br>
-                офлайн магазина:<br>
+                офлайн магазина:
                 <b>
-                  ул. Большая Конюшенная<br>
+                  ул. Большая Конюшенная
                   19/8, Санкт-Петербург
                 </b>
               </p>
               <p class="tel">
-                Для заказов по телефону:<br>
-                <b>8 812 450-25-25</b><br>
+                Для заказов по телефону:
+                <b>8 812 450-25-25</b>
                 <span>(с 10 до 20 ежедневно)</span>
               </p>
               <a class="btn feedback-btn" href="#">Форма обратной связи</a>
@@ -222,8 +222,8 @@
     <div class="popup-feedback">
       <p>Мы обязательно вам ответим!</p>
         <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="text" id="feedback-name-field" name="name" placeholder="Как вас зовут?">
-          <input type="email" id="feedback-email-field" name="email" placeholder="Ваша почта ответа?">
+          <input type="text" name="name" placeholder="Как вас зовут?">
+          <input type="email" name="email" placeholder="Ваша почта ответа?">
           <textarea id="comment" name="comment"> Напишите что-нибудь...</textarea>
           <button class="btn" type="submit">Отправить</button>
           <a class="close-btn">Закрыть</a>
