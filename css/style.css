@@ -385,6 +385,7 @@ body {
   display: none;
   width: 277px;
   height: 214px;
+  padding: 0 17px 0 19px;
   font-size: 14px;
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -393,7 +394,7 @@ body {
 
 .login-field input {
   display: block;
-  width: 86.7%;
+  width: 100%;
   margin: 20px auto;
   padding: 9px 15px;
   font-size: 14px;
@@ -405,7 +406,6 @@ body {
 
 .login-field button {
   float: left;
-  margin-left: 19px;
   margin-right: 20px;
   padding: 10px 25px;
   border-radius: 20px;
@@ -849,19 +849,13 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   display: block;
 }
 
-.item-list .item:hover > a {
+.item:hover > a {
   border-bottom: none;
 }
 
 .item:not(:hover) .item-img-price {
   z-index: 0;
 }
-
-/*.fix {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}*/
 
 .quick-show {
   position: absolute;
