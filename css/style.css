@@ -146,7 +146,7 @@ body {
 .main-nav {
   float: left;
   width: 380px;
-  margin-top: 22px;
+  margin-top: 23px;
 }
 
 .main-menu {
@@ -166,11 +166,20 @@ body {
 
 .main-menu a {
   display: block;
-  margin: 7px 13px;
+  margin: 7px 12px;
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.main-menu > li:first-child a{
+  margin-left: 14px;
+}
+
+.main-menu > li:last-child a{
+  margin-left: 12px;
+}
+
 
 .main-menu .active {
   background-color: #d07058;
@@ -181,16 +190,15 @@ body {
 }
 
 .main-menu > li:not(.active):hover {
-  background-color: #ffffff;
+  background-color: #f7f6f3;
   cursor: pointer;
 }
 
 .main-menu > li:not(.active):hover a {
-  color: #323232;
+  color: #333333;
 }
 
 .main-menu > li:not(.active):active {
-  background-color: #ffffff;
   box-shadow: inset 0 1px 3px 0 #000000;
   cursor: pointer;
 }
@@ -213,7 +221,7 @@ body {
   font-weight: 400;
   text-indent: 7px;
   list-style: none;
-  background: #ffffff;
+  background: #f8f7f4;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
@@ -274,6 +282,7 @@ body {
   margin-right: 0;
 }
 
+
 .search { /* Кнопка поиска */
   position: relative;
   display: inline-block;
@@ -281,12 +290,27 @@ body {
   width: 32px;
   height: 32px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.2) url("../img/icons/search-icon.svg") center no-repeat;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icons/search-icon.svg") center no-repeat;
+  transform: translate(-50%, -50%);
+}
+
 .search:hover {
-  background: #f8f7f4 url("../img/icons/search-icon-hover.svg") center no-repeat;
+  background-color: #f8f7f4;
+}
+
+.search:hover .search-icon {
+  background: url("../img/icons/search-icon-hover.svg") center no-repeat;
 }
 
 .search:hover .search-field {
@@ -300,7 +324,7 @@ body {
   z-index: 10;
   display: none;
   width: 340px;
-  height: 84px;
+  min-height: 84px;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -312,15 +336,15 @@ body {
   bottom: 100%;
   right: 0;
   width: 50%;
-  height: 37px;
+  height: 10px;
 }
 
 .search-field input {
   width: 90%;
   margin-top: 20px;
-  padding: 0 14px;
+  padding: 9px 14px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   border: 1px solid #d3d3d2;
   border-radius: 3px;
@@ -331,17 +355,32 @@ body {
   display: inline-block;
   vertical-align: top;
   height: 32px;
-  padding-top: 9px;
+  padding-top: 8px;
   padding-right: 16px;
   padding-left: 44px;
-  background: rgba(255, 255, 255, 0.2) url("../img/icons/login-icon.svg") 16px 6px no-repeat;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
+}
+
+.login a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.login-icon {
+  position: absolute;
+  top: 48%;
+  left: 51px;;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icons/login-icon.svg") 15% center no-repeat;
+  transform: translate(-50%, -50%);
 }
 
 .login-field {
   position: absolute;
-  top: 37px;
-  right: 0;
+  top: 36px;
+  right: -3px;
   z-index: 10;
   display: none;
   width: 277px;
@@ -356,21 +395,24 @@ body {
   display: block;
   width: 86.7%;
   margin: 20px auto;
-  padding: 0 14px;
+  padding: 9px 15px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   border: 1px solid #d3d3d2;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .login-field button {
   float: left;
-  margin-left: 20px;
+  margin-left: 19px;
   margin-right: 20px;
+  padding: 10px 25px;
+  border-radius: 20px;
 }
 
 .login-field p {
+  margin-top: -2px;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
@@ -384,8 +426,15 @@ body {
 }
 
 .login:hover {
-  color: #000000;
-  background: #f8f7f4 url("../img/icons/login-icon-hover.svg") 16px 6px no-repeat;
+  background-color: #f8f7f4;
+}
+
+.login:hover > a {
+  color: #323232;
+}
+
+.login:hover .login-icon {
+  background: url("../img/icons/login-icon-hover.svg") 15% center no-repeat;
 }
 
 .login:hover .login-field {
@@ -397,7 +446,7 @@ body {
   position: absolute;
   bottom: 100%;
   right: 0;
-  height: 37px;
+  height: 5px;
   width: 36%;
 }
 
@@ -407,18 +456,38 @@ body {
   vertical-align: top;
   min-width: 117px;
   height: 32px;
-  padding-top: 9px;
+  padding-top: 8px;
   padding-right: 16px;
-  padding-left: 45px;
+  padding-left: 44px;
   font-size: 14px;
   text-align: left;
-  background: rgba(255, 255, 255, 0.2) url("../img/icons/basket.svg") 16px 6px no-repeat;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
 }
 
-.cart.cart-full {
-  color: #323232;
-  background: #f7f6f3 url("../img/icons/basket-full.svg") 20% center no-repeat;
+.cart-icon {
+  position: absolute;
+  top: 51%;
+  left: 60px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icons/basket.svg") 15% center no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.cart a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.cart-full {
+  background-color: #f7f6f3;
+}
+
+.cart-full > a {
+  color: #313131;
 }
 
 .cart-field {
@@ -427,12 +496,17 @@ body {
   right: 0;
   z-index: 10;
   display: none;
-  padding: 15px 15px 80px 15px;
+  padding: 5px 15px 80px 15px;
   width: 540px;
   min-height: 240px;
+  color: #323232;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cart-full .cart-icon {
+  background: url("../img/icons/basket-full.svg") 15% center no-repeat;
 }
 
 .cart:hover .cart-field {
@@ -445,13 +519,14 @@ body {
   bottom: 100%;
   right: 0;
   width: 23%;
-  height: 37px;
+  height: 5px;
 }
 
 .cart-list { /* Список в корзине сделан таблицей */
   display: table;
   font-size: 13px;
   font-weight: 400px;
+  border-spacing: 0 15px
 }
 
 .cart-list ul {
@@ -468,14 +543,19 @@ body {
   text-align: left;
 }
 
+.cart-list i {
+  font-style: normal;
+  color: #999999;
+}
+
 .column1 {
   display: table-column;
-  width: 2%;
+  width: 2.5%;
 }
 
 .column2 {
   display: table-column;
-  width: 10%;
+  width: 12.5%;
 }
 
 .column3 {
@@ -484,33 +564,36 @@ body {
 
 .column4 {
   display: table-column;
-  width: 25%;
+  width: 22.5%;
 }
 
 .column5 {
   display: table-column;
-  width: 20%;
+  width: 17%;
 }
 
 .cart-field hr {
   height: 1px;
-  margin: 15px 0;
+  margin: 5px 0;
   color: #cacac7;
   background-color: #cacac7;
   border: none;
 }
 
 .cart-field p {
+  margin-top: 14px;
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
   text-align: right;
 }
 
-.checkout { /* Кнопка "Оформить заказ" */
+.checkout-btn { /* Кнопка "Оформить заказ" */
   position: absolute;
-  bottom: 19px;
-  right: 12px;
+  bottom: 22px;
+  right: 15px;
+  padding: 10px 15px;
+  border-radius: 20px;
 }
 
 .call-us {
@@ -546,6 +629,7 @@ body {
 
 .breadcrumbs li {
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .breadcrumbs a {
@@ -556,7 +640,15 @@ body {
 
 .breadcrumbs li:not(:last-child)::after {
   content: "»";
-  padding-left: 4px;
+  padding-left: 3px;
+}
+
+.breadcrumbs li:nth-of-type(2) {
+  margin-left: 3px;
+  }
+
+.breadcrumbs li:nth-of-type(3) {
+  margin-left: 2px;
 }
 
 .clearfix::after {
@@ -604,18 +696,27 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
 .slider-controls { /* Область для собственных кнопок слайдера */
   position: absolute;
-  bottom: 52px;
+  bottom: 63px;
   font-size: 0;
 }
 
 .slider-controls label { /* Создаем новые кнопки для слайдера */
   display: inline-block;
+  vertical-align: middle;
   width: 21px;
   height: 21px;
   margin-right: 8px;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
+.slider-controls label:active {
+  background-color: #ffffff;
 }
 
 .slide1:checked ~ .wrap .slider-controls label[for="slide1"], /* Закрашиваем активную кнопку */
@@ -672,7 +773,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   width: 48.867%;
   min-height: 229px;
   padding: 16px 18px 88px 19px;
-  background: url("../img/rapsberry-bg.jpg") -27px -94px no-repeat;
+  background: #c2234d url("../img/rapsberry-bg.jpg") -27px -94px no-repeat;
   border-radius: 15px;
 }
 
@@ -682,7 +783,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   width: 48.867%;
   min-height: 229px;
   padding: 16px 18px 88px 19px;
-  background: url("../img/choco-bg.jpg") -218px -104px no-repeat;
+  background: #845642 url("../img/choco-bg.jpg") -218px -104px no-repeat;
   border-radius: 15px;
 }
 
@@ -732,12 +833,12 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 .item-hover {
   content: "";
   position: absolute;
-  top: -6px;
-  left: -6px;
+  top: -9px;
+  bottom: -85px;
+  left: -10px;
+  right: -10px;
   z-index: 5;
   display: none;
-  width: 104.12%;
-  height: 128.12%;
   padding: 0 10px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
@@ -756,20 +857,23 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   z-index: 0;
 }
 
-.fix {
+/*.fix {
   width: 100%;
   height: 100%;
   position: relative;
-}
+}*/
 
 .quick-show {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  width: 100%;
+  width: 80%;
   padding-left: 0;
   padding-right: 0;
   transform: translate(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .item {
@@ -838,7 +942,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   margin-bottom: 40px;
   padding: 24px 21px 14px 21px;
   color: #323232;
-  background: url("../img/texture-wafer.png");
+  background: #e5d5af url("../img/texture-wafer.png");
   border-radius: 15px;
 }
 
@@ -914,13 +1018,14 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   position: relative;
   min-height: 210px;
   margin: 5px;
-  padding: 29px 21px 29px 21px;
+  padding: 29px 21px 21px 21px;
   background-color: #f8f7f4;
   border-radius: 15px;
 }
 
 .subscribe form {
-  margin-top: 36px;
+  margin-top: 7%;
+/*    margin-top: 36px;*/
 }
 
 .subscribe form input[type="email"] {
@@ -944,6 +1049,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 .map-block {
   min-height: 429px;
   margin-top: 40px;
+  margin-bottom: 33px;
   background: url("../img/map.jpg") center no-repeat;
 }
 
@@ -1073,6 +1179,7 @@ iframe {
   display: inline-block;
   vertical-align: top;
   width: 48.867%;
+  margin-top: 1px;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -1089,6 +1196,10 @@ iframe {
   float: right;
   width: 50%;
   text-indent: -9px;
+}
+
+.footer-menu p {
+  margin-bottom: 4px;
 }
 
 .footer-menu-left p:nth-child(2) {
@@ -1115,7 +1226,7 @@ iframe {
   display: inline-block;
   vertical-align: top;
   width: 23.299%;
-  margin-top: -12px;
+  margin-top: -13px;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -1127,7 +1238,7 @@ iframe {
 }
 
 .made-in p {
-  margin-top: -5px;
+  margin-top: -1px;
 }
 
   /* ===============FOOTER. END=============== */
@@ -1148,6 +1259,7 @@ iframe {
   height: 26px;
   padding-top: 4px;
   font-size: 16px;
+  font-weight: 500;
   line-height: 18px;
   text-decoration: none;
   text-align: center;
@@ -1155,11 +1267,11 @@ iframe {
   border-radius: 50%;
 }
 
-.page-nav a:not(.prev):not(.next):hover {
+.page-nav a:not(.prev):not(.next):not(.active):hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.page-nav a:not(.prev):not(.next):active {
+.page-nav a:not(.prev):not(.next):not(.active):active {
   color: #323232;
   background: #ffffff;
 }
@@ -1197,11 +1309,12 @@ iframe {
 
 .filters legend {
   margin-bottom: 6px;
-  margin-left: 17px;
+  margin-left: 16px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
 }
+
 
 .filters fieldset {
   display: inline-block;
@@ -1238,7 +1351,7 @@ iframe {
 
 .filters button:active {
   color: #323232;
-  background: #ffffff;
+  background: #eaeaea;
   box-shadow: inset 0 1px 1px #696969;
 }
 
@@ -1250,29 +1363,19 @@ iframe {
 }
 
 .sort select {
-  padding: 0 18px 0 10px;
+  padding: 0 28px 0 10px;
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #a9bab0;
   border: none;
   outline:none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .sort select::-ms-expand {
   display: none;
-}
-
-.sort::after {
-  content:"";
-  position: absolute;
-  top: 38px;
-  right: 15px;
-  border: 4px solid #ffffff;
-  border-bottom-width: 0;
-  border-left-color:transparent;
-  border-right-color:transparent;
 }
 
 .sort option {
@@ -1280,16 +1383,40 @@ iframe {
   background-color: #ffffff;
 }
 
+.sort .input-area::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  width: 8px;
+  height: 5px;
+  background: url("../img/icons/triangle.svg") center no-repeat;
+}
+
+.sort .input-area:hover {
+  background-color: #ffffff;
+}
+
+.sort .input-area:hover .select-sort {
+  color: black;
+  background-color: #ffffff;
+}
+
+
           /* Фильтр цены */
 
 .price-filter {
   width: 218px;
 }
 
+.price-filter legend {
+  margin-left: 14px;
+}
+
 .scale {
   height: 4px;
   margin: 9px 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(248, 247, 244, 0.5);
 }
 
 .bar {
@@ -1307,8 +1434,12 @@ iframe {
   height: 20px;
   background-color: #f8f7f4;
   border-radius: 50%;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
 }
 
 .max-toggle {
@@ -1321,6 +1452,10 @@ iframe {
   width: 415px;
 }
 
+.fatness legend {
+  margin-left: 14px;
+}
+
 .fatness input[type="radio"] {
   display: none;
 }
@@ -1328,7 +1463,8 @@ iframe {
 .fatness input[type="radio"] + label {
   position: relative;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
+  margin-top: -1px;
   margin-left: 11px;
   padding-left: 29px;
   cursor: pointer;
@@ -1356,21 +1492,23 @@ iframe {
   left: -1px;
   width: 20px;
   height: 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid #f8f7f4;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 3px #a8b9af;
 }
 
-.fatness input[type="radio"]:checked + label::before {
-  background: #ffffff;
+.fatness input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #f8f7f4;
+  border-radius: 50%;
 }
 
-.fatness input[type="radio"] +label:hover::before {
-  box-sizing: content-box;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #ffffff;
-  box-shadow: inset 0 0 0 3px #a8b9af;
+.fatness input[type="radio"]:not(:disabled) + label:hover::before {
+  border-width: 2px;
 }
 
           /* Наполнители */
@@ -1386,7 +1524,8 @@ iframe {
 .filler input[type="checkbox"] + label {
   position: relative;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
+  margin-top: -1px;
   margin-left: 11px;
   padding-left: 32px;
   font-size: 16px;
@@ -1422,12 +1561,24 @@ iframe {
   border-radius: 4px;
 }
 
-.filler input[type="checkbox"]:checked + label::before {
+/*.filler input[type="checkbox"]:checked + label::before {
   background: url("../img/icons/checked-box.svg") center no-repeat;
+}*/
+
+.filler input[type="checkbox"]:checked + label::after { /*Галочка в чекбоксе из borderов*/
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 10px;
+  height: 7px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg)
 }
 
-.filler input[type="checkbox"] +label:hover::before {
-  border: 2px solid #ffffff;
+.filler input[type="checkbox"]:not(:disabled) +label:hover::before {
+  border-width: 2px;
 }
 
 .input-area { /* Фон формы фильтров */
@@ -1438,6 +1589,11 @@ iframe {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 20px;
+}
+
+input[type="radio"]:disabled + label,
+input[type="checkbox"]:disabled + label {
+  opacity: 0.4;
 }
 
 /* Фильтры. END */
@@ -1454,7 +1610,7 @@ iframe { /* Интерактивная карта */
         /* Фидбэк. START */
 
 .popup-feedback {
-/*  display: none;*/
+  display: none;
   position: fixed;
   top: 25%;
   left: 50%;
@@ -1566,3 +1722,4 @@ textarea:focus {
 }
 
         /* Фидбэк. END */
+
