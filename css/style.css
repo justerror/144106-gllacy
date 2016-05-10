@@ -85,19 +85,19 @@ h2 {
   border-bottom: 1px solid rgba(236, 89, 60, 0.3);
 }
 
-input::-webkit-input-placeholder { /*Стилизуем placeholderы*/
+input::-webkit-input-placeholder {
   font-weight: 400;
   color: #999999;
   opacity: 1.0;
 }
 
-input:-ms-input-placeholder { /*Стилизуем placeholderы*/
+input:-ms-input-placeholder {
   font-weight: 400;
   color: #999999;
   opacity: 1.0;
 }
 
-input::-moz-placeholder { /*Стилизуем placeholderы*/
+input::-moz-placeholder {
   font-weight: 400;
   color: #999999;
   opacity: 1.0;
@@ -119,6 +119,8 @@ hr {
   background-color: rgba(254, 254, 254, 0.3);
   border: none;
 }
+
+
 
 body {
   min-width: 900px;
@@ -146,6 +148,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2.25%;
+}
+
+.backlight { /* Подсветка фона страницы в каталоге */
+  background: url("../img/bg-backlight.png") 50% 0 repeat-x;
 }
 
   /* ===============HEADER=============== */
@@ -194,7 +200,6 @@ body {
 .main-menu > li:last-child a{
   margin-left: 12px;
 }
-
 
 .main-menu .active {
   background-color: #d07058;
@@ -250,10 +255,6 @@ body {
   border-bottom: none;
 }
 
-.sub-menu li:first-child {
-
-}
-
 .sub-menu li:first-child a {
   padding-bottom: 11px;
   margin-bottom: 2px;
@@ -281,6 +282,8 @@ body {
   background-color: #d07058;
 }
 
+
+
 .user-block { /* Блок пользователя */
   position: relative;
   float: right;
@@ -302,7 +305,6 @@ body {
 .user-block > div:last-child {
   margin-right: 0;
 }
-
 
 .search { /* Кнопка поиска */
   position: relative;
@@ -496,8 +498,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
-
 .cart a {
   text-decoration: none;
   color: #ffffff;
@@ -543,7 +543,7 @@ body {
   height: 5px;
 }
 
-.cart-list { /* Список в корзине сделан таблицей */
+.cart-list { /* Список товаров в корзине */
   display: table;
   font-size: 13px;
   font-weight: 400px;
@@ -621,6 +621,8 @@ body {
   border-radius: 20px;
 }
 
+
+
 .call-us {
   position: absolute;
   top: 73px;
@@ -670,7 +672,7 @@ body {
 
 .breadcrumbs li:nth-of-type(2) {
   margin-left: 3px;
-  }
+}
 
 .breadcrumbs li:nth-of-type(3) {
   margin-left: 2px;
@@ -681,6 +683,7 @@ body {
   display: table;
   clear: both;
 }
+
 
           /* Слайдер. START */
 
@@ -787,6 +790,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
           /* Слайдер. END */
 
+
+
           /* Промо-блок из двух баннеров. START */
 
 .promo-block {
@@ -851,6 +856,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
           /* Промо-блок из двух баннеров. END */
 
+
+
           /* Стилизация товара. START */
 
 .items-popular, .item-list { /* Убираем отступы между инлайн-блоками */
@@ -883,6 +890,16 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
+.quick-show {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 80%;
+  padding-left: 0;
+  padding-right: 0;
+  transform: translate(-50%);
+}
+
 .item:hover .item-hover {
   display: block;
 }
@@ -899,16 +916,6 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   display: block;
   margin-top: -3px;
   padding: 0 5px;
-}
-
-.quick-show {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  width: 80%;
-  padding-left: 0;
-  padding-right: 0;
-  transform: translate(-50%);
 }
 
 .item {
@@ -973,6 +980,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
           /* Стилизация товара. END */
 
+
 .advantages {
   margin-bottom: 40px;
   padding: 24px 21px 14px 21px;
@@ -1012,6 +1020,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   width: 48.867%;
 }
 
+
+
 .blog-news {
   float: left;
   width: 48.867%;
@@ -1041,6 +1051,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   background: rgba(255, 255, 255, 0.8);
 }
 
+
+
 .subscribe {
   float: right;
   width: 48.867%;
@@ -1060,7 +1072,6 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
 .subscribe form {
   margin-top: 7%;
-/*    margin-top: 36px;*/
 }
 
 .subscribe form input[type="email"] {
@@ -1084,6 +1095,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   overflow: hidden;
 }
 
+
+
 .map-block {
   min-height: 429px;
   margin-top: 40px;
@@ -1092,6 +1105,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 }
 
 iframe {
+  position: absolute;
   width: 100%;
   height: 429px;
   border: none;
@@ -1112,10 +1126,6 @@ iframe {
   font-size: 14px;
   line-height: 20px;
   }
-
-.contacts .adress:not(b) {
-
-}
 
 .contacts .adress b {
   display: block;
@@ -1152,137 +1162,8 @@ iframe {
   padding-bottom: 9px;
 }
 
-  /* ===============FOOTER=============== */
 
-.main-footer {
-  min-height: 84px;
-  margin: 0 auto;
-  margin-top: 32px;
-  font-size: 0;
-}
-
-.social-block, .footer-menu {
-  margin-right: 2.2675%;
-}
-
-.social-block {
-  display: inline-block;
-  vertical-align: top;
-  width: 23.299%;
-  margin-top: 4px;
-}
-
-.social-btn {
-  float: left;
-  display: block;
-  width: 37px;
-  height: 37px;
-  margin-right: 12px;
-  border: 3px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-}
-
-.social-btn:hover {
-  border: 3px solid rgba(255, 255, 255, 0.71);
-  opacity: 1;
-}
-
-.social-btn:active {
-  border: 3px solid rgba(254, 254, 254, 0.7);
-  box-shadow: inset 0 2px 1px #888888;
-  opacity: 1;
-}
-
-.twit {
-  background: url("../img/icons/twit-icon.svg") no-repeat;
-  opacity: 0.8;
-}
-
-.inst {
-  background: url("../img/icons/inst-icon.svg") no-repeat;
-  opacity: 0.8;
-}
-
-.fb {
-  background: url("../img/icons/fb-icon.svg") no-repeat;
-  opacity: 0.8;
-}
-
-.vk {
-  background: url("../img/icons/vk-icon.svg") no-repeat;
-  opacity: 0.8;
-}
-
-.footer-menu {
-  display: inline-block;
-  vertical-align: top;
-  width: 48.867%;
-  margin-top: 1px;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-.footer-menu-left {
-  float: left;
-  width: 50%;
-  padding-right: 40px;
-  text-align: right;
-}
-
-.footer-menu-right{
-  float: right;
-  width: 50%;
-  text-indent: -9px;
-}
-
-.footer-menu p {
-  margin-bottom: 4px;
-}
-
-.footer-menu-left p:nth-child(2) {
-  padding-right: 13px;
-  text-align: right;
-}
-
-.heart {
-  position: relative;
-  font-weight: 700;
-}
-
-.heart::before {
-  content: "";
-  position: absolute;
-  left: -22px;
-  top: 1px;
-  width: 15px;
-  height: 13px;
-  background: url("../img/icons/heart.svg") center no-repeat;
-}
-
-.made-in {
-  display: inline-block;
-  vertical-align: top;
-  width: 23.299%;
-  margin-top: -13px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: right;
-}
-
-.htmla-logo {
-  margin-right: 80px;
-}
-
-.made-in p {
-  margin-top: -1px;
-}
-
-  /* ===============FOOTER. END=============== */
-
-
-.page-nav {           /* Пагинатор страниц */
+.page-nav {
   margin-top: 42px;
   margin-right: -9px;
   margin-bottom: 21px;
@@ -1338,7 +1219,10 @@ iframe {
   transform: rotate(180deg);
 }
 
-.filters { /* Фильтры каталога */
+
+          /* Фильтры каталога. START */
+
+.filters {
   width: 890px;
   margin-top: 26px;
   margin-bottom: 24px;
@@ -1352,7 +1236,6 @@ iframe {
   font-weight: 500;
   line-height: 16px;
 }
-
 
 .filters fieldset {
   display: inline-block;
@@ -1393,7 +1276,7 @@ iframe {
   box-shadow: inset 0 1px 1px #696969;
 }
 
-          /* Сортировка */
+
 
 .sort {
   position: relative;
@@ -1441,7 +1324,6 @@ iframe {
 }
 
 
-          /* Фильтр цены */
 
 .price-filter {
   width: 218px;
@@ -1484,7 +1366,7 @@ iframe {
   left: 132px;
 }
 
-          /* Жирность */
+
 
 .fatness {
   width: 415px;
@@ -1549,7 +1431,7 @@ iframe {
   border-width: 2px;
 }
 
-          /* Наполнители */
+
 
 .filler {
   width: 702px;
@@ -1619,7 +1501,9 @@ iframe {
   border-width: 2px;
 }
 
-.input-area { /* Фон формы фильтров */
+
+
+.input-area {
   position: relative;
   display: block;
   padding: 7px 5px;
@@ -1634,18 +1518,146 @@ input[type="checkbox"]:disabled + label {
   opacity: 0.4;
 }
 
-/* Фильтры. END */
+          /* Фильтры каталога. END */
 
 
-iframe { /* Интерактивная карта */
+  /* ===============FOOTER=============== */
+
+.main-footer {
+  min-height: 84px;
+  margin: 0 auto;
+  margin-top: 32px;
+  font-size: 0;
+}
+
+
+
+.social-block, .footer-menu {
+  margin-right: 2.2675%;
+}
+
+.social-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 23.299%;
+  margin-top: 4px;
+}
+
+.social-btn {
+  float: left;
+  display: block;
+  width: 37px;
+  height: 37px;
+  margin-right: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social-btn:hover {
+  border: 3px solid rgba(255, 255, 255, 0.71);
+  opacity: 1;
+}
+
+.social-btn:active {
+  border: 3px solid rgba(254, 254, 254, 0.7);
+  box-shadow: inset 0 2px 1px #888888;
+  opacity: 1;
+}
+
+.twit {
+  background: url("../img/icons/twit-icon.svg") no-repeat;
+  opacity: 0.8;
+}
+
+.inst {
+  background: url("../img/icons/inst-icon.svg") no-repeat;
+  opacity: 0.8;
+}
+
+.fb {
+  background: url("../img/icons/fb-icon.svg") no-repeat;
+  opacity: 0.8;
+}
+
+.vk {
+  background: url("../img/icons/vk-icon.svg") no-repeat;
+  opacity: 0.8;
+}
+
+
+
+.footer-menu {
+  display: inline-block;
+  vertical-align: top;
+  width: 48.867%;
+  margin-top: 1px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.footer-menu-left {
+  float: left;
+  width: 50%;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.footer-menu-right{
+  float: right;
+  width: 50%;
+  text-indent: -9px;
+}
+
+.footer-menu p {
+  margin-bottom: 4px;
+}
+
+.footer-menu-left p:nth-child(2) {
+  padding-right: 13px;
+  text-align: right;
+}
+
+.heart {
+  position: relative;
+  font-weight: 700;
+}
+
+.heart::before {
+  content: "";
   position: absolute;
+  left: -22px;
+  top: 1px;
+  width: 15px;
+  height: 13px;
+  background: url("../img/icons/heart.svg") center no-repeat;
 }
 
-.backlight { /* Подсветка фона страницы в каталоге */
-  background: url("../img/bg-backlight.png") 50% 0 repeat-x;
+
+
+.made-in {
+  display: inline-block;
+  vertical-align: top;
+  width: 23.299%;
+  margin-top: -13px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: right;
 }
 
-        /* Фидбэк. START */
+.htmla-logo {
+  margin-right: 80px;
+}
+
+.made-in p {
+  margin-top: -1px;
+}
+
+  /* ===============FOOTER. END=============== */
+
+
+          /* FEEDBACK OVERLAY. START */
 
 .popup-feedback {
   display: none;
@@ -1759,5 +1771,4 @@ textarea:focus {
   box-shadow: inset 0 0 0 1px #8fbdec;
 }
 
-        /* Фидбэк. END */
-
+          /* FEEDBACK OVERLAY. END */
