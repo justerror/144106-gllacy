@@ -11,7 +11,7 @@
   <body>
     <div class="backlight">
       <header class="main-header">
-        <div class="wrapper"> <!-- START WRAPPER -->
+        <div class="wrapper">
           <div class="container clearfix">
             <a class="logo" href="index.html">
               <img src="img/gllacy-logo.svg" width="153" height="63" alt="Логотип GllacyShop">
@@ -72,14 +72,14 @@
                     <div class="column5"></div>
                     <ul>
                       <li><img src="img/icons/cross.svg" width="11" height="11" alt=""></li>
-                      <li><img src="img/items/jam-citrus.jpg" width="33" height="33" alt="Мороженое-пломбир с апельсиновым джемом"></li>
+                      <li><img class="cart-item-img" src="img/items/jam-citrus.jpg" width="33" height="33" alt="Мороженое-пломбир с апельсиновым джемом"></li>
                       <li>Пломбир с апельсиновым джемом</li>
                       <li>1,5 кг x <i>200 руб.</i></li>
                       <li>300 руб.</li>
                     </ul>
                     <ul>
                       <li><img src="img/icons/cross.svg" width="11" height="11" alt=""></li>
-                      <li><img src="img/items/strawberry-chocolate.jpg" width="33" height="33" alt="Мороженое Клубничный пломбир с присыпкой из белого шоколада"></li>
+                      <li><img class="cart-item-img" src="img/items/strawberry-chocolate.jpg" width="33" height="33" alt="Мороженое Клубничный пломбир с присыпкой из белого шоколада"></li>
                       <li>Клубничный пломбир с присыпкой из белого шоколада</li>
                       <li>1,5 кг x <i>300 руб.</i></li>
                       <li>450 руб.</li>
@@ -96,10 +96,10 @@
               <b>8 812 450-25-25</b>
             </div>
           </div>
-        </div> <!-- END WRAPPER -->
+        </div>
       </header>
       <main>
-        <div class="wrapper"> <!-- START WRAPPER -->
+        <div class="wrapper">
           <div class="container clearfix">
             <nav class="breadcrumbs">
               <ul>
@@ -115,7 +115,7 @@
               </ul>
             </nav>
             <h1>Сливочное мороженое</h1>
-            <form class="filters" action="https://echo.htmlacademy.ru/" method="get"> <!-- Фильтры -->
+            <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="sort">
                 <legend>Сортировка:</legend>
                 <div class="input-area">
@@ -176,7 +176,9 @@
                   <img class="item-img" src="img/items/jam-citrus.jpg" width="267" height="267" alt="Мороженое Сливочное с апельсиновым джемом и цитрусовой стружкой">
                   <p><b>310</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 2 -->
                 <div class="item-hover">
@@ -186,7 +188,9 @@
                   <img class="item-img" src="img/items/coffee-chocolate.jpg" width="267" height="267" alt="Мороженое Сливочно-кофейное с кусочками шоколада">
                   <p><b>380</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 3 -->
                 <div class="item-hover">
@@ -196,7 +200,9 @@
                   <img class="item-img" src="img/items/strawberry-chocolate.jpg" width="267" height="267" alt="Мороженое Сливочно-клубничное с присыпкой из белого шоколада">
                   <p><b>355</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 4 -->
                 <div class="item-hover">
@@ -206,7 +212,9 @@
                   <img class="item-img" src="img/items/cream-caramel.jpg" width="267" height="267" alt="Мороженое Сливочное крем-брюле с карамельной подливкой">
                   <p><b>415</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 5 -->
                 <div class="item-hover">
@@ -216,7 +224,9 @@
                   <img class="item-img" src="img/items/cowberry-jam.jpg" width="267" height="267" alt="Мороженое Сливочное с брусничным джемом">
                   <p><b>325</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное с брусничным джемом</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное с брусничным джемом</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 6 -->
                 <div class="item-hover">
@@ -226,7 +236,9 @@
                   <img class="item-img" src="img/items/bilberry-berries.jpg" width="267" height="267" alt="Мороженое Сливочно-черничное с цельными ягодами черники">
                   <p><b>410</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочно-черничное с цельными ягодами черники</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочно-черничное с цельными ягодами черники</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 7 -->
                 <div class="item-hover">
@@ -236,7 +248,9 @@
                   <img class="item-img" src="img/items/lemon-caramel.jpg" width="267" height="267" alt="Мороженое Сливочно-лимонное с карамельной присыпкой">
                   <p><b>375</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 8 -->
                 <div class="item-hover">
@@ -246,7 +260,9 @@
                   <img class="item-img" src="img/items/chocolate-shaving.jpg" width="267" height="267" alt="Мороженое Сливочное с шоколадной стружкой">
                   <p><b>320</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное с шоколадной стружкой</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное с шоколадной стружкой</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 9 -->
                 <div class="item-hover">
@@ -256,7 +272,9 @@
                   <img class="item-img" src="img/items/chocolate-slices.jpg" width="267" height="267" alt="Мороженое Сливочно-ванильное с кусочками шоколада">
                   <p><b>440</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочно-ванильное с кусочками шоколада</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочно-ванильное с кусочками шоколада</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 10 -->
                 <div class="item-hover">
@@ -266,7 +284,9 @@
                   <img class="item-img" src="img/items/menthol-syrup.jpg" width="267" height="267" alt="Мороженое Сливочное с ментоловым сиропом">
                   <p><b>435</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное с ментоловым сиропом</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное с ментоловым сиропом</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 11 -->
                 <div class="item-hover">
@@ -276,7 +296,9 @@
                   <img class="item-img" src="img/items/dark-chocolate.jpg" width="267" height="267" alt="Мороженое Сливочное с кусочками черного шоколада">
                   <p><b>355</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное с кусочками черного шоколада</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное с кусочками черного шоколада</a>
+                </div>
               </div>
               <div class="item"> <!-- Мороженое 12 -->
                 <div class="item-hover">
@@ -286,10 +308,12 @@
                   <img class="item-img" src="img/items/mint-syrup.jpg" width="267" height="267" alt="Мороженое Сливочное с мятным сиропом">
                   <p><b>420</b>/кг</p>
                 </div>
-                <a class="link" href="#">Сливочное с мятным сиропом</a>
+                <div class="item-link-box">
+                  <a class="link" href="#">Сливочное с мятным сиропом</a>
+                </div>
               </div>
             </section>
-            <div class="page-nav"> <!-- Постраничная навигация -->
+            <div class="page-nav">
               <a class="prev disabled"></a>
               <a class="active">1</a>
               <a href="#">2</a>
@@ -300,10 +324,10 @@
             </div>
           </div>
           <hr>
-        </div> <!-- END WRAPPER -->
+        </div>
       </main>
       <footer class="main-footer">
-        <div class="wrapper"> <!-- START WRAPPER -->
+        <div class="wrapper">
           <div class="container clearfix">
             <div class="social-block">
               <a class="social-btn twit" href="#"></a>
@@ -323,12 +347,12 @@
             </div>
             <div class="made-in">
               <a class="htmla-logo" href="https://htmlacademy.ru/">
-                 <img src="img/htmla-logo.svg" width="108" height="38" alt="Логотип HTML Academy">
+                <img src="img/htmla-logo.svg" width="108" height="38" alt="Логотип HTML Academy">
               </a>
               <p>Сделано в <a class="link" href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
             </div>
           </div>
-        </div> <!-- END WRAPPER -->
+        </div>
       </footer>
     </div>
   </body>
