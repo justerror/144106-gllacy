@@ -18,20 +18,20 @@
             </a>
             <nav class="main-nav">
               <ul class="main-menu">
-                <li class="active">
+                <li class="main-inner menu-active">
                   <a>Каталог</a>
                   <ul class="sub-menu">
-                    <li><a href="#"><b>Новинки</b></a></li>
-                    <li class="active"><a>Сливочное</a></li>
-                    <li><a href="#">Щербеты</a></li>
-                    <li><a href="#">Фруктовый лед</a></li>
-                    <li><a href="#">Мелорин</a></li>
+                    <li class="sub-inner"><a href="#"><b>Новинки</b></a></li>
+                    <li class="sub-inner menu-active"><a>Сливочное</a></li>
+                    <li class="sub-inner"><a href="#">Щербеты</a></li>
+                    <li class="sub-inner"><a href="#">Фруктовый лед</a></li>
+                    <li class="sub-inner"><a href="#">Мелорин</a></li>
                   </ul>
                 </li>
-                <li>
+                <li class="main-inner">
                   <a href="#">Доставка и оплата</a>
                 </li>
-                <li>
+                <li class="main-inner">
                   <a href="#">О Компании</a>
                 </li>
               </ul>
@@ -118,7 +118,7 @@
             <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="sort">
                 <legend>Сортировка:</legend>
-                <div class="input-area">
+                <div class="input-area sort-area">
                   <select class="select-sort" name="sort-by">
                     <option value="popular">по популярности</option>
                     <option value="cheap">сначала недорогие</option>
@@ -140,28 +140,28 @@
               <fieldset class="fatness">
                 <legend>Жирность:</legend>
                 <div class="input-area">
-                  <input type="radio" name="fatness" value="0" id="radio1">
+                  <input class="radio-fat" type="radio" name="fatness" value="0" id="radio1">
                   <label for="radio1">0%</label>
-                  <input type="radio" name="fatness" value="to 10" id="radio2" checked>
+                  <input class="radio-fat" type="radio" name="fatness" value="to 10" id="radio2" checked>
                   <label for="radio2">до 10%</label>
-                  <input type="radio" name="fatness" value="to 30" id="radio3">
+                  <input class="radio-fat" type="radio" name="fatness" value="to 30" id="radio3">
                   <label for="radio3">до 30%</label>
-                  <input type="radio" name="fatness" value="over 30" id="radio4">
+                  <input class="radio-fat" type="radio" name="fatness" value="over 30" id="radio4">
                   <label for="radio4">выше 30%</label>
                 </div>
               </fieldset>
               <fieldset class="filler">
                 <legend>Наполнители:</legend>
                 <div class="input-area">
-                  <input type="checkbox" name="filler" value="chocolate" id="checkbox1" checked>
+                  <input class="checkbox-fill" type="checkbox" name="filler" value="chocolate" id="checkbox1" checked>
                   <label for="checkbox1"><span>шоколадные</span></label>
-                  <input type="checkbox" name="filler" value="sugarpowder" id="checkbox2" checked>
+                  <input class="checkbox-fill" type="checkbox" name="filler" value="sugarpowder" id="checkbox2" checked>
                   <label for="checkbox2"><span>сахарные присыпки</span></label>
-                  <input type="checkbox" name="filler" value="fruit" id="checkbox3">
+                  <input class="checkbox-fill" type="checkbox" name="filler" value="fruit" id="checkbox3">
                   <label for="checkbox3"><span>фрукты</span></label>
-                  <input type="checkbox" name="filler" value="syrup" id="checkbox4">
+                  <input class="checkbox-fill" type="checkbox" name="filler" value="syrup" id="checkbox4">
                   <label for="checkbox4"><span>сиропы</span></label>
-                  <input type="checkbox" name="filler" value="jam" id="checkbox5">
+                  <input class="checkbox-fill" type="checkbox" name="filler" value="jam" id="checkbox5">
                   <label for="checkbox5"><span class="fake">джемы</span></label>
                 </div>
               </fieldset>

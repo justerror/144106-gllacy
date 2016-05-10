@@ -171,10 +171,10 @@ body {
 }
 
 .main-menu {
-  margin-left: -15px;
+  margin-left: -13px;
 }
 
-.main-menu > li {
+.main-inner {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -193,38 +193,39 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-menu > li:first-child a{
-  margin-left: 14px;
-}
-
-.main-menu > li:last-child a{
+.main-inner:nth-child(2) a {
   margin-left: 12px;
 }
 
-.main-menu .active {
+.main-inner:nth-child(3) a {
+  margin-left: 13px;
+}
+
+.menu-active {
   background-color: #d07058;
 }
 
-.main-menu .active a {
+.menu-active a {
+  color: #ffffff;
   border-bottom: none;
 }
 
-.main-menu > li:not(.active):hover {
+.main-inner:not(.menu-active):hover {
   background-color: #f7f6f3;
   cursor: pointer;
 }
 
-.main-menu > li:not(.active):hover a {
+.main-inner:not(.menu-active):hover a {
   color: #333333;
 }
 
-.main-menu > li:not(.active):active {
+.main-inner:not(.menu-active):active {
   background-color: #ededed;
   box-shadow: inset 0 1px 3px 0 #000000;
   cursor: pointer;
 }
 
-.main-menu > li:hover .sub-menu { /* Отображает подменю при наведении на кнопку */
+.main-inner:hover .sub-menu { /* Отображает подменю при наведении на кнопку */
   display: block;
 }
 
@@ -255,7 +256,7 @@ body {
   border-bottom: none;
 }
 
-.sub-menu li:first-child a {
+.sub-inner:first-child a {
   padding-bottom: 11px;
   margin-bottom: 2px;
   border-bottom: 1px solid rgba(53, 53, 53, 0.2);
@@ -269,19 +270,13 @@ body {
   width: 100%;
 }
 
-.sub-menu li:not(.active):hover {
+.sub-menu li:not(.menu-active):hover {
   background-color: #fbded7;
 }
 
-.sub-menu li:not(.active):active {
+.sub-menu li:not(.menu-active):active {
   background-color: #f6b5a5;
 }
-
-.sub-menu .active a {
-  color: #ffffff;
-  background-color: #d07058;
-}
-
 
 
 .user-block { /* Блок пользователя */
@@ -560,7 +555,7 @@ body {
   text-align: center;
 }
 
-.cart-list ul li:nth-child(3) {
+.cart-list li:nth-child(3) {
   text-align: left;
 }
 
@@ -748,9 +743,9 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   background-color: #ffffff;
 }
 
-.slide1:checked ~ .wrap .slider-controls label[for="slide1"], /* Закрашиваем активную кнопку */
-.slide2:checked ~ .wrap .slider-controls label[for="slide2"],
-.slide3:checked ~ .wrap .slider-controls label[for="slide3"] {
+.slide1:checked ~ .wrap label[for="slide1"], /* Закрашиваем активную кнопку */
+.slide2:checked ~ .wrap label[for="slide2"],
+.slide3:checked ~ .wrap label[for="slide3"] {
   background-color: #ffffff;
 }
 
@@ -763,14 +758,14 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 .slide3:checked ~ .wrap {
   background: #9d8b84 url("../img/sliders/ice-slider3.png") 50% 0 no-repeat;
 }
-.slide1:checked ~ .wrap .slider-slides .slide1 {
+.slide1:checked ~ .wrap .slide1 {
   display:block;
 }
 
-.slide2:checked ~ .wrap .slider-slides .slide2 { /* Когда нажата вторая кнопка, будет показан текст и кнопка второго слайдера */
+.slide2:checked ~ .wrap .slide2 { /* Когда нажата вторая кнопка, будет показан текст и кнопка второго слайдера */
   display:block;
 }
-.slide3:checked ~ .wrap .slider-slides .slide3 {
+.slide3:checked ~ .wrap .slide3 {
   display:block;
 }
 
@@ -798,7 +793,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   margin-bottom: 40px;
 }
 
-.promo-left {
+.promo-left,
+.promo-right {
   position: relative;
   float: left;
   width: 48.867%;
@@ -809,13 +805,8 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 }
 
 .promo-right {
-  position: relative;
   float: right;
-  width: 48.867%;
-  min-height: 229px;
-  padding: 16px 18px 88px 19px;
   background: #845642 url("../img/choco-bg.jpg") -218px -104px no-repeat;
-  border-radius: 15px;
 }
 
 .promo-left h1,
@@ -890,13 +881,13 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.quick-show {
+.quick-show { /* Кнопка "Быстрый просмотр" в .item-hover */
   position: absolute;
   bottom: 20px;
   left: 50%;
   width: 80%;
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
   transform: translate(-50%);
 }
 
@@ -904,18 +895,12 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   display: block;
 }
 
-.item:hover > div > a {
+.item:hover a {
   border-bottom: none;
 }
 
 .item:not(:hover) .item-img-price {
   z-index: 0;
-}
-
-.item .item-link-box {
-  display: block;
-  margin-top: -3px;
-  padding: 0 5px;
 }
 
 .item {
@@ -933,7 +918,6 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
 .item:nth-child(4n) {
   margin-right: 0;
-
 }
 
 .item-img {
@@ -961,21 +945,27 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.item-img-price p b {
+.item-img-price b {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
   padding-right: 35px;
 }
 
-.item-img-price p b::after {
+.item-img-price b::after {
   content: "";
   position: absolute;
   bottom: 9px;
   left: 79px;
   width: 33px;
   height: 37px;
-  background: url(../img/icons/rouble.svg);
+  background: url("../img/icons/rouble.svg");
+}
+
+.item-link-box {
+  display: block;
+  margin-top: -3px;
+  padding: 0 5px;
 }
 
           /* Стилизация товара. END */
@@ -983,14 +973,13 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
 .advantages {
   margin-bottom: 40px;
-  padding: 24px 21px 14px 21px;
+  padding: 24px 22px 14px 20px;
   color: #323232;
   background: #e5d5af url("../img/texture-wafer.png");
   border-radius: 15px;
 }
 
 .advantages h1 {
-  margin-left: -2px;
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 500;
@@ -999,11 +988,12 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
 .advantages img {
   float: left;
+  margin-left: 1px;
 }
 
 .advantages p {
   margin: 0;
-  margin-left: 56px;
+  margin-left: 57px;
   padding-top: 12px;
   padding-bottom: 10px;
   font-size: 16px;
@@ -1012,12 +1002,12 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 
 .advantage-left {
   float: left;
-  width: 48.867%;
+  width: 48.8%;
 }
 
 .advantage-right {
   float: right;
-  width: 48.867%;
+  width: 48.81%;
 }
 
 
@@ -1074,7 +1064,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   margin-top: 7%;
 }
 
-.subscribe form input[type="email"] {
+.subscribe input[type="email"] {
   width: 100%;
   height: 44px;
   padding: 0 13px 1px 13px;
@@ -1122,12 +1112,12 @@ iframe {
   border-radius: 15px;
 }
 
-.contacts .adress {
+.address {
   font-size: 14px;
   line-height: 20px;
-  }
+}
 
-.contacts .adress b {
+.address b {
   display: block;
   margin-top: 1px;
   margin-bottom: 18px;
@@ -1135,13 +1125,13 @@ iframe {
   line-height: 24px;
 }
 
-.contacts .tel {
+.tel {
   margin-bottom: 19px;
   font-size: 14px;
   line-height: 20px;
 }
 
-.contacts .tel b {
+.tel b {
   display: block;
   margin-top: 5px;
   margin-bottom: 2px;
@@ -1149,18 +1139,19 @@ iframe {
   line-height: 22px;
 }
 
-.contacts .tel span {
+.tel span {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
 }
 
-.contacts .feedback-btn {
+.feedback-btn {
   width: 100%;
-  margin: 5px auto 0 auto;
-  padding-top: 10px;
-  padding-bottom: 9px;
+  margin: 4px auto 0 auto;
+  padding-top: 9px;
+  padding-bottom: 11px;
 }
+
 
 
 .page-nav {
@@ -1304,7 +1295,7 @@ iframe {
   background-color: #ffffff;
 }
 
-.sort .input-area::after {
+.sort-area::after {
   content: "";
   position: absolute;
   top: 45%;
@@ -1314,11 +1305,11 @@ iframe {
   background: url("../img/icons/triangle.svg") center no-repeat;
 }
 
-.sort .input-area:hover {
+.sort-area:hover {
   background-color: #ffffff;
 }
 
-.sort .input-area:hover .select-sort {
+.sort-area:hover .select-sort {
   color: black;
   background-color: #ffffff;
 }
@@ -1380,7 +1371,7 @@ iframe {
   display: none;
 }
 
-.fatness input[type="radio"] + label {
+.fatness label {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -1393,19 +1384,19 @@ iframe {
   line-height: 18px;
 }
 
-.fatness input[type="radio"] + label:nth-of-type(2) {
+.fatness label:nth-of-type(2) {
   margin-left: 16px;
 }
 
-.fatness input[type="radio"] + label:nth-of-type(3) {
+.fatness label:nth-of-type(3) {
   margin-left: 17px;
 }
 
-.fatness input[type="radio"] + label:nth-of-type(4) {
+.fatness label:nth-of-type(4) {
   margin-left: 16px;
 }
 
-.fatness input[type="radio"] + label::before {
+.fatness label::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -1416,7 +1407,7 @@ iframe {
   border-radius: 50%;
 }
 
-.fatness input[type="radio"]:checked + label::after {
+.radio-fat:checked + label::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1427,7 +1418,7 @@ iframe {
   border-radius: 50%;
 }
 
-.fatness input[type="radio"]:not(:disabled) + label:hover::before {
+.radio-fat:not(:disabled) + label:hover::before {
   border-width: 2px;
 }
 
@@ -1441,7 +1432,7 @@ iframe {
   display: none;
 }
 
-.filler input[type="checkbox"] + label {
+.checkbox-fill + label {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -1454,23 +1445,23 @@ iframe {
   cursor: pointer;
 }
 
-.filler input[type="checkbox"] + label:nth-of-type(2) {
+.checkbox-fill + label:nth-of-type(2) {
   margin-left: 16px
 }
 
-.filler input[type="checkbox"] + label:nth-of-type(3) {
+.checkbox-fill + label:nth-of-type(3) {
   margin-left: 16px
 }
 
-.filler input[type="checkbox"] + label:nth-of-type(4) {
+.checkbox-fill + label:nth-of-type(4) {
   margin-left: 20px
 }
 
-.filler input[type="checkbox"] + label:nth-of-type(5) {
+.checkbox-fill + label:nth-of-type(5) {
   margin-left: 16px
 }
 
-.filler input[type="checkbox"] + label::before {
+.checkbox-fill + label::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -1481,11 +1472,11 @@ iframe {
   border-radius: 4px;
 }
 
-/*.filler input[type="checkbox"]:checked + label::before {
+/*.checkbox-fill:checked + label::before {
   background: url("../img/icons/checked-box.svg") center no-repeat;
 }*/
 
-.filler input[type="checkbox"]:checked + label::after { /*Галочка в чекбоксе из borderов*/
+.checkbox-fill:checked + label::after { /*Галочка в чекбоксе из borderов*/
   content: "";
   position: absolute;
   top: 4px;
@@ -1497,7 +1488,7 @@ iframe {
   transform: rotate(-45deg)
 }
 
-.filler input[type="checkbox"]:not(:disabled) +label:hover::before {
+.checkbox-fill:not(:disabled) + label:hover::before {
   border-width: 2px;
 }
 
@@ -1532,7 +1523,8 @@ input[type="checkbox"]:disabled + label {
 
 
 
-.social-block, .footer-menu {
+.social-block,
+.footer-menu {
   margin-right: 2.2675%;
 }
 
