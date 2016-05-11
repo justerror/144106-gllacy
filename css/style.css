@@ -81,7 +81,7 @@ h2 {
 }
 
 .link-black:hover {
-  color: #ffbc9e;
+  color: #e84d37;
   border-bottom: 1px solid rgba(236, 89, 60, 0.3);
 }
 
@@ -166,12 +166,12 @@ body {
 
 .main-nav {
   float: left;
-  width: 380px;
+  width: 45%;
   margin-top: 23px;
 }
 
 .main-menu {
-  margin-left: -13px;
+  margin-left: -14px;
 }
 
 .main-inner {
@@ -183,22 +183,23 @@ body {
   line-height: 18px;
   font-weight: 700;
   border-radius: 20px;
+
 }
 
 .main-menu a {
-  display: block;
-  margin: 7px 12px;
+  display: inline-block;
+  vertical-align: bottom;
+  max-width: 300px;
+  margin: 7px 14px 14px 13px;
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.main-inner:nth-child(2) a {
-  margin-left: 12px;
-}
-
-.main-inner:nth-child(3) a {
-  margin-left: 13px;
+.main-inner:not(:first-child) a {
+  margin-left: 10px;
 }
 
 .menu-active {
@@ -236,6 +237,7 @@ body {
   z-index: 100;
   display: none;
   min-width: 143px;
+  min-height: 171px;
   margin: 0;
   padding: 3px 0;
   font-size: 14px;
@@ -250,8 +252,8 @@ body {
 
 .sub-menu a {
   display: block;
-  margin: 0 12px;
-  padding: 8px 0;
+  margin: 0 9px 0 6px;
+  padding: 8px 0 7px 7px;
   color: #323232;
   border-bottom: none;
 }
@@ -398,12 +400,12 @@ body {
 .login-field {
   position: absolute;
   top: 36px;
-  right: -3px;
+  right: -2px;
   z-index: 10;
   display: none;
   width: 277px;
-  height: 214px;
-  padding: 0 17px 0 19px;
+  min-height: 214px;
+  padding: 0 17px 10px 19px;
   font-size: 14px;
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -413,8 +415,8 @@ body {
 .login-field input {
   display: block;
   width: 100%;
-  margin: 20px auto;
-  padding: 9px 15px;
+  margin: 20px auto 19px auto;
+  padding: 9px 13px;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
@@ -422,19 +424,28 @@ body {
   border-radius: 5px;
 }
 
-.login-field button {
+.login-btn {
   float: left;
-  margin-right: 20px;
+  max-width: 240px;
+  margin-top: 1px;
+  margin-right: 5px;
+  margin-bottom: 10px;
   padding: 10px 25px;
   border-radius: 20px;
+  box-shadow: 0 1px 2px #ac1000;
 }
 
 .login-field p {
-  margin-top: -2px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 121px;
+  margin-bottom: -3px;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .login-field a {
@@ -703,7 +714,7 @@ body {
 
 .slide1 a, /* Кнопка слайдера */
 .slide2 a,
-.slide3 a  {
+.slide3 a {
   max-width: 400px;
   height: 63px;
   margin-top: 31px;
@@ -800,13 +811,13 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   width: 48.867%;
   min-height: 229px;
   padding: 16px 18px 88px 19px;
-  background: #c2234d url("../img/rapsberry-bg.jpg") -27px -94px no-repeat;
+  background: #c2234d url("../img/rapsberry-bg.jpg") -27px -94px repeat-y;
   border-radius: 15px;
 }
 
 .promo-right {
   float: right;
-  background: #845642 url("../img/choco-bg.jpg") -218px -104px no-repeat;
+  background: #845642 url("../img/choco-bg.jpg") -218px -104px repeat-y;
 }
 
 .promo-left h1,
@@ -1034,11 +1045,17 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 }
 
 .blog-news a {
+  padding-bottom: -5px;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   color: #353535;
   background: rgba(255, 255, 255, 0.8);
+  border-width: 2px;
+}
+
+.blog-news a:hover {
+  border-width: 2px;
 }
 
 
