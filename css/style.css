@@ -1061,7 +1061,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
   font-weight: 700;
   line-height: 30px;
   color: #353535;
-/*  background: rgba(255, 255, 255, 0.8);*/
+  background: rgba(255, 255, 255, 0.8);
   border-width: 2px;
 }
 
@@ -1685,6 +1685,13 @@ input[type="checkbox"]:disabled + label {
 
           /* FEEDBACK OVERLAY. START */
 
+@keyframes bounce {
+  0% { transform: translateY(-2000px); }
+  70% { transform: translateY(-30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -1696,22 +1703,29 @@ input[type="checkbox"]:disabled + label {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.overlay-show {
+  display: block;
+
+}
+
 .popup-feedback {
   position: fixed;
   top: 25%;
   left: 50%;
   z-index: 100;
-  width: 480px;
+  width: 477px;
+  min-height: 442px;
   margin-left: -240px;
-  padding: 25px;
+  padding: 18px 25px 24px 25px;
   color: #323232;
   background-color: #f8f7f4;
   border-radius: 12px;
+  animation: bounce 0.6s;
 }
 
 .popup-feedback p {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
@@ -1734,8 +1748,8 @@ input[type="checkbox"]:disabled + label {
 .close-btn::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 8px;
+  left: 2px;
   width: 22px;
   height: 2px;
   background-color: #000000;
@@ -1767,8 +1781,8 @@ input[type="checkbox"]:disabled + label {
 
 textarea[name="comment"] {
   width: 100%;
-  min-height: 150px;
-  margin-bottom: 25px;
+  min-height: 155px;
+  margin-bottom: 20px;
   padding: 9px 15px;
   font-size: 16px;
   line-height: 24px;

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>GllacyShop - Главная</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=cyrillic,latin" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
@@ -253,14 +253,69 @@
       <div class="popup-feedback">
         <p>Мы обязательно вам ответим!</p>
         <form class="form-feedback" action="https://echo.htmlacademy.ru/" method="get">
-          <input type="text" name="name" id="name" placeholder="Как вас зовут?">
-          <input type="email" name="email" id="email" placeholder="Ваша почта ответа?">
-          <textarea id="comment" name="comment" placeholder=" Напишите что-нибудь..."></textarea>
+          <input class="name" type="text" name="name" id="name" placeholder="Как вас зовут?" required>
+          <input class="email" type="email" name="email" id="email" placeholder="Ваша почта для ответа?" required>
+          <textarea class="comment" id="comment" name="comment" placeholder=" Напишите что-нибудь..." required></textarea>
           <button class="btn" type="submit">Отправить</button>
         </form>
         <a class="close-btn">Закрыть</a>
       </div>
     </div>
     </div>
+    <script>
+
+      var link = document.querySelector(".feedback-btn");
+      var overlay = document.querySelector(".overlay");
+      var close = overlay.querySelector(".close-btn");
+      var form = overlay.querySelector(".form-feedback");
+      var yourName = overlay.querySelector(".name");
+      var yourEmail = overlay.querySelector(".email");
+      var yourComment = overlay.querySelector(".comment");
+      var storageName = localStorage.getItem("yourName");
+      var storageEmail = localStorage.getItem("yourEmail");
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        overlay.classList.add("overlay-show");
+        yourName.focus();
+
+        if (storageName) {
+          yourName.value = storageName;
+          yourEmail.focus();
+        } else {
+          yourName.focus();
+        }
+
+        if (storageEmail) {
+          yourEmail.value = storageEmail;
+          yourComment.focus();
+        } else {
+          yourEmail.focus();
+        }
+       });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        overlay.classList.remove("overlay-show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (overlay.classList.contains("overlay-show")) {
+            overlay.classList.remove("overlay-show");
+          }
+        }
+      });
+
+      form.addEventListener("submit", function() {
+        if (!yourName.value || !yourEmail.value || !yourComment.value) {
+          event.preventDefault();
+          console.log("Нужно заполнить все поля");
+        } else {
+          localStorage.setItem("yourName", yourName.value);
+          localStorage.setItem("yourEmail", yourEmail.value);
+        }
+      });
+    </script>
   </body>
 </html>
