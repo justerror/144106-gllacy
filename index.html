@@ -279,19 +279,14 @@
         overlay.classList.add("overlay-show");
         yourName.focus();
 
-        if (storageName) {
+        if (storageName && storageEmail) {
           yourName.value = storageName;
-          yourEmail.focus();
+          yourEmail.value = storageEmail
+          yourComment.focus();
         } else {
           yourName.focus();
         }
 
-        if (storageEmail) {
-          yourEmail.value = storageEmail;
-          yourComment.focus();
-        } else {
-          yourEmail.focus();
-        }
        });
 
       close.addEventListener("click", function(event) {
