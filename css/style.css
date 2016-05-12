@@ -1685,11 +1685,18 @@ input[type="checkbox"]:disabled + label {
 
           /* FEEDBACK OVERLAY. START */
 
+@-webkit-keyframes bounce {
+  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
+  70% { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
 @keyframes bounce {
-  0% { transform: translateY(-2000px); }
-  70% { transform: translateY(-30px); }
-  90% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
+  70% { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 
 .overlay {
@@ -1720,7 +1727,8 @@ input[type="checkbox"]:disabled + label {
   color: #323232;
   background-color: #f8f7f4;
   border-radius: 12px;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .popup-feedback p {
