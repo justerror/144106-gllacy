@@ -46,7 +46,10 @@
               </a>
               <div class="search-field">
                 <form action="https://echo.htmlacademy.ru/" method="get">
-                  <input type="text" name="search" placeholder="Что ищем?">
+                <div class="input-wrap">
+                  <input type="text" name="search" id="search" placeholder="Что ищем?" required>
+                  <label for="search">Что ищем?</label>
+                </div>
                 </form>
               </div>
             </div>
@@ -56,8 +59,14 @@
               </a>
               <div class="login-field">
                 <form action="https://echo.htmlacademy.ru/" method="post">
-                  <input type="email" name="login" placeholder="Электронная почта">
-                  <input type="password" name="password" placeholder="Пароль">
+                  <div class="input-wrap">
+                    <input type="text" name="login" id="login" placeholder="Электронная почта" required>
+                    <label for="login">Электронная почта</label>
+                  </div>
+                  <div class="input-wrap">
+                    <input type="password" name="password" id="password" placeholder="Пароль" required>
+                    <label for="password">Пароль</label>
+                  </div>
                   <button class="btn login-btn" type="submit">Войти</button>
                 </form>
                 <p><a class="link-black" href="#">Забыли пароль?</a></p>
@@ -190,7 +199,10 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
               <button class="btn btn-subscribe" type="submit">Отправить</button>
               <div class="input-email-subscribe-fix">
-                <input type="email" name="user-email" placeholder="Электронная почта">
+                <div class="input-wrap">
+                  <input type="text" name="email-sub" id="email-sub" placeholder="Электронная почта" required>
+                  <label for="email-sub">Электронная почта</label>
+                </div>
               </div>
             </form>
             </div>
@@ -253,64 +265,24 @@
       <div class="popup-feedback">
         <p>Мы обязательно вам ответим!</p>
         <form class="form-feedback" action="https://echo.htmlacademy.ru/" method="get">
-          <input class="name" type="text" name="name" id="name" placeholder="Как вас зовут?" required>
-          <input class="email" type="email" name="email" id="email" placeholder="Ваша почта для ответа?" required>
-          <textarea class="comment" id="comment" name="comment" placeholder=" Напишите что-нибудь..." required></textarea>
+          <div class="input-wrap">
+            <input class="name" type="text" name="name" id="name" placeholder="Как вас зовут?" required>
+            <label for="name">Как вас зовут?</label>
+          </div>
+          <div class="input-wrap">
+            <input class="email" type="text" name="email" id="email" placeholder="Ваша почта для ответа?" required>
+            <label for="email">Ваша почта для ответа?</label>
+          </div>
+          <div class="input-wrap">
+            <textarea class="comment" name="comment" id="comment" placeholder=" Напишите что-нибудь..." required></textarea>
+            <label for="comment">Напишите что-нибудь...</label>
+          </div>
           <button class="btn" type="submit">Отправить</button>
         </form>
         <a class="close-btn">Закрыть</a>
       </div>
     </div>
     </div>
-    <script>
-
-      var link = document.querySelector(".feedback-btn");
-      var overlay = document.querySelector(".overlay");
-      var close = overlay.querySelector(".close-btn");
-      var form = overlay.querySelector(".form-feedback");
-      var yourName = overlay.querySelector(".name");
-      var yourEmail = overlay.querySelector(".email");
-      var yourComment = overlay.querySelector(".comment");
-      var storageName = localStorage.getItem("yourName");
-      var storageEmail = localStorage.getItem("yourEmail");
-
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        overlay.classList.add("overlay-show");
-        yourName.focus();
-
-        if (storageName && storageEmail) {
-          yourName.value = storageName;
-          yourEmail.value = storageEmail
-          yourComment.focus();
-        } else {
-          yourName.focus();
-        }
-
-       });
-
-      close.addEventListener("click", function(event) {
-        event.preventDefault();
-        overlay.classList.remove("overlay-show");
-      });
-
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (overlay.classList.contains("overlay-show")) {
-            overlay.classList.remove("overlay-show");
-          }
-        }
-      });
-
-      form.addEventListener("submit", function() {
-        if (!yourName.value || !yourEmail.value || !yourComment.value) {
-          event.preventDefault();
-          console.log("Нужно заполнить все поля");
-        } else {
-          localStorage.setItem("yourName", yourName.value);
-          localStorage.setItem("yourEmail", yourEmail.value);
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

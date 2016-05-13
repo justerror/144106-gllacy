@@ -38,8 +38,8 @@ h2 {
   vertical-align: top;
   padding: 11px 21px;
   font-size: 18px;
-  line-height: 24px;
   font-weight: 700;
+  line-height: 24px;
   text-align: center;
   color: #ffffff;
   background: -webkit-linear-gradient(top, #f26843, #e74a35);
@@ -51,8 +51,8 @@ h2 {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   cursor: pointer;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -90,35 +90,6 @@ h2 {
   border-bottom: 1px solid rgba(236, 89, 60, 0.3);
 }
 
-form input:-ms-input-placeholder,
-form textarea:-ms-input-placeholder {
-  font-weight: 400;
-  color: #999999;
-  opacity: 1.0;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  font-weight: 400;
-  color: #999999;
-  opacity: 1.0;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder{
-  font-weight: 400;
-  color: #999999;
-  opacity: 1.0;
-}
-
-input {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #323232;
-  outline: none;
-}
-
 hr {
   height: 1px;
   margin-left: 2.25%;
@@ -127,6 +98,104 @@ hr {
   background-color: rgba(254, 254, 254, 0.3);
   border: none;
 }
+
+/* Стилизация input. START */
+
+input {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #323232;
+  outline: none;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+  border-color: #c7c6c5;
+  box-shadow: inset 0 0 0 1px #c7c6c5;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #8fbdec;
+  box-shadow: inset 0 0 0 1px #8fbdec;
+}
+
+input[type="text"] + label,
+input[type="password"] + label,
+textarea + label {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  display: none;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #999999;
+}
+
+input[type="text"]:required + label,
+input[type="password"]:required + label,
+textarea:required + label {
+  display: block;
+}
+
+input[type="text"]:invalid + label,
+input[type="password"]:invalid + label,
+textarea:invalid + label {
+  display: none;
+}
+
+input[type="text"]:focus + label,
+input[type="password"]:focus + label,
+textarea:focus + label {
+  display: block;
+  color: #5b9ddf;
+}
+
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+  opacity: 1.0;
+}
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+  opacity: 1.0;
+}
+
+form input::-moz-placeholder,
+form textarea::-moz-placeholder{
+  font-weight: 400;
+  color: #999999;
+  opacity: 1.0;
+}
+
+form input:focus:-ms-input-placeholder,
+form textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+form input:focus::-webkit-input-placeholder,
+form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+form input:focus::-moz-placeholder,
+form textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Стилизация input. END */
 
 
 
@@ -167,9 +236,7 @@ body {
 .logo {
   float: left;
   width: 153px;
-  margin-top: 10px;
-  margin-right: 30px;
-  margin-left: -5px;
+  margin: 10px 30px 0 -5px;
 }
 
 .main-nav {
@@ -191,7 +258,6 @@ body {
   line-height: 18px;
   font-weight: 700;
   border-radius: 20px;
-
 }
 
 .main-menu a {
@@ -358,6 +424,7 @@ body {
   display: none;
   width: 340px;
   min-height: 84px;
+  padding: 19px 15px 20px 15px;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -373,9 +440,8 @@ body {
 }
 
 .search-field input {
-  width: 90%;
+  width: 100%;
   height: 44px;
-  margin-top: 20px;
   padding: 9px 14px;
   font-size: 14px;
   font-weight: 700;
@@ -1090,10 +1156,10 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 }
 
 .subscribe form {
-  margin-top: 7%;
+  margin-top: 3%;
 }
 
-.subscribe input[type="email"] {
+.subscribe input[type="text"] {
   width: 100%;
   height: 44px;
   padding: 0 13px 1px 13px;
@@ -1104,7 +1170,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 .btn-subscribe {
   float: right;
   max-width: 250px;
-  margin-top: -1px;
+  margin-top: 14px;
   padding: 9px 19px 11px 19px;
   border-radius: 22px;
 }
@@ -1112,6 +1178,7 @@ input[type="radio"] { /* Скрываем стандартные радио-кн
 .input-email-subscribe-fix {
   padding-right: 11px;
   overflow: hidden;
+  padding-top: 15px;
 }
 
 
@@ -1773,8 +1840,7 @@ input[type="checkbox"]:disabled + label {
           transform: rotate(-45deg);
 }
 
-.popup-feedback input[type="text"],
-.popup-feedback input[type="email"] {
+.popup-feedback input[type="text"] {
   width: 265px;
   height: 44px;
   margin: 0;
@@ -1804,22 +1870,6 @@ textarea[name="comment"] {
 
 .popup-feedback .btn {
   float: right;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-textarea:hover {
-  border-color: #c7c6c5;
-  box-shadow: inset 0 0 0 1px #c7c6c5;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-  border-color: #8fbdec;
-  box-shadow: inset 0 0 0 1px #8fbdec;
 }
 
           /* FEEDBACK OVERLAY. END */
