@@ -1376,7 +1376,8 @@ iframe {
 }
 
 .select-sort {
-  padding: 0 28px 0 8px;
+  width: 100%;
+  padding-left: 8px;
   font-weight: 500;
   color: #ffffff;
   background-color: transparent;
