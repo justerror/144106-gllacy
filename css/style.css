@@ -1775,17 +1775,40 @@ input[type="checkbox"]:disabled + label {
           /* FEEDBACK OVERLAY. START */
 
 @-webkit-keyframes bounce {
-  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-  70% { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% { -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+  }
+
+  90% { -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+  }
+
+  100% { -webkit-transform: translateY(0);
+                 transform: translateY(0);
+  }
 }
 
 @keyframes bounce {
-  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-  70% { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  0% { -webkit-transform: translateY(-2000px);
+               transform: translateY(-2000px);
+  }
+
+  70% { -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+  }
+
+  90% { -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+  }
+
+  100% { -webkit-transform: translateY(0);
+                 transform: translateY(0);
+  }
 }
 
 .overlay {
