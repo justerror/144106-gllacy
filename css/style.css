@@ -261,8 +261,7 @@ body {
 }
 
 .main-menu a {
-  display: inline-block;
-  vertical-align: bottom;
+  display: block;
   max-width: 300px;
   margin: 7px 14px 14px 13px;
   text-decoration: none;
